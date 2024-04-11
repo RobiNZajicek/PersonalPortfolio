@@ -1,0 +1,90 @@
+import React from "react";
+import {
+  VerticalTimeline,
+  VerticalTimelineElement,
+} from "react-vertical-timeline-component";
+import { motion } from "framer-motion";
+import './Experience.css'
+import "react-vertical-timeline-component/style.min.css";
+
+import { styles } from "../../styles.js";
+import { experiences } from "../../constants";
+import { SectionWrapper } from "../../hoc";
+import { textVariant } from "../../utils/motion.js";
+import { useTranslation } from 'react-i18next';
+
+const ExperienceCard = ({ experience }) => {
+  const { t } = useTranslation(); // Use the useTranslation hook to access translations
+  return (
+    <VerticalTimelineElement
+      contentStyle={{
+        background: 'linear-gradient(180deg, #aa94fe 0%, #7c5fe6 100%)',backgroundSize:'cover',backgroundRepeat:'no-repeat',
+        color: "black",
+     
+      }}
+      contentArrowStyle={{ borderRight: "7px solid  #805ad5" }}
+      date={<span style={{ fontWeight: 'bold', color: '#805ad5' }}>{experience.date}</span>}
+      iconStyle={{ background: '#805ad5'}}
+      icon={
+        <div className='black flex justify-center items-center w-full h-full'>
+          <span
+            src={experience.icon}
+            alt={experience.company_name}
+            className='w-[60%] h-[60%] object-contain'
+          />
+        </div>
+      }
+    >
+      <div>
+        <h3 className='font-ed text-[34px] font-extrabold'>{t(experience.title)}</h3>
+        <h2
+          className='  text-[20px] text-white font-bold'
+          style={{ margin: 0 }}
+        >
+         <span className="text-white">{t(experience.company_name)}</span> 
+        </h2>
+      </div>
+
+      <ul className='mt-5 text-white list-disc ml-5 space-y-2'>
+        {experience.points.map((point, index) => (
+          <li
+            key={`experience-point-${index}`}
+            className=' text-[15px] font-normal text-white pl-1 tracking-wider'
+          >
+            {t(point)}
+          </li>
+        ))}
+      </ul>
+    </VerticalTimelineElement>
+  );
+};
+
+const Experience = () => {
+  const { t } = useTranslation(); // Use the useTranslation hook to access translations
+
+  return (
+    <section id="experience" className='works'>
+      <motion.div variants={textVariant()} >
+        <p className={`${styles.sectionSubText} text-center text-purple-700`}>
+         {t("experience_subtext")}
+        </p>
+        <h2 className={`${styles.sectionHeadText} text-center `}>
+          {t("experience_title")}   
+        </h2>
+      </motion.div>
+
+      <div className='mt-20 flex flex-col bg text-white'>
+        <VerticalTimeline className='before:bg-white '>
+          {experiences.map((experience, index) => (
+            <ExperienceCard
+              key={`experience-${index}`}
+              experience={experience}
+            />
+          ))}
+        </VerticalTimeline>
+      </div>
+    </section>
+  );
+};
+
+export default SectionWrapper(Experience, "work");

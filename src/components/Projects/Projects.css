@@ -1,0 +1,26 @@
+.projects{
+    height: 100vh;
+}
+.cardes{
+    height: 530px;
+    width: 400px;
+    background: #7c5fe6;
+   
+}
+.projectosss{
+    margin-left: -4rem;
+    padding: -3rem;
+    width: 1300px;
+}
+.div-cardss{
+    
+    margin-top: -1rem;
+}
+.documentation-btn{
+   border: 1px solid white;
+    background-color: white;
+    color: #4285F4;
+}
+.tch-btn{
+    background: #7c5fe6;
+}

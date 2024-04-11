@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+.about{
+    height: 55vh;
+    
+    position: relative;
+    padding: 0 18.7rem;
+}
+.about-container{
+    display: flex;
+    flex-direction: row;
+    
+}
+
+/* .blur-div{
+    filter: blur(204px);
+    width: 300px;
+    height: 300px;
+    right: 1%;
+}
+.blur-div-2{
+    filter: blur(124px);
+    width: 300px;
+    height: 300px;
+    left: 15%;
+    top: 25%;
+} */
+.about-par{
+    
+    width: 97%;
+    color: white ;
+    font-weight: 600;
+    font-size: 18px;
+}
+.about-left{
+    display: flex;
+    flex: 1;
+}
+.about-right{
+    padding-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+.div-container{
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+}
+.div-projects{
+
+}
+.div-expirience{
+
+}
+.div-more{
+
+}
+.Line img {
+    height: 50px;
+    width: 50px;
+}
+.line-underline{
+    font-size: 22px;
+    font-family: 'Montserrat', sans-serif;
+        font-weight: 400;
+}
+.Line-h{
+    
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    height: 50px;
+    width: 100%;
+    display: flex;
+    justify-content:center;
+    /* color: white; */
+    color: black;
+}
+.Line-h span{
+    font-size: 60px; 
+}
+
+.statistics {
+    z-index: 100;
+    gap: 1.5rem;
+    padding: 3rem 0rem;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    
+}
+
+.statosos {
+    border: 1px solid white;
+    display: flex;
+    flex-direction: column;
+    width: 190px;
+    height: 90px;
+    padding: 10px; 
+    border-radius: 0.5rem; 
+    /* color: white;  */
+    
+    color: white;
+    background: linear-gradient(180deg, #aa94fe 0%, #7c5fe6 100%);
+    position: relative;
+    background-size: cover;
+}
+.statosos-s{
+    font-size: 20px;
+   font-weight: 700;
+    font-family: 'Poppins';
+    display: flex;
+    flex-direction: row;
+}
+.paroslos{
+    color:rgb(215, 215, 215) ;
+}
+.statosos-st{
+    margin-top: 0.7rem;
+    font-size: 16px;
+    font-weight: 700;
+     font-family: 'Poppins';
+}
+.linosos{
+    width: 45px;
+    height: 3px;
+    background-color: white;
+}
