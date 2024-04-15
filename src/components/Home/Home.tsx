@@ -1,10 +1,9 @@
-import React from 'react';
+
 import './Home.css';
 import { FaLinkedin } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 import { useState, useEffect } from "react";
-import RobinImg from '../../assets/RobinImg.jpg';
-import Tape from '../../assets/tape.png';
+
 import html from '../../assets/html.png';
 import tailwind from '../../assets/tailwind.png';
 import css from '../../assets/social.png';
@@ -19,13 +18,12 @@ import firebase from '../../assets/firebase.png';
 import java from '../../assets/java.png';
 import mongoDb from '../../assets/mogoDb.webp';
 import ts from '../../assets/typescript.png';
-import CV from '../../assets/CV/CV_RobinZajicek.pdf';
+
 import ITs from '../../assets/ITs.json';
 import Lottie from 'lottie-react';
 import BoostStrap from '../../assets/bootstrap.png';
-import { FaMousePointer } from "react-icons/fa";
+
 import { motion } from 'framer-motion';
-import { textVariant } from "../../utils/motion.js";
 import { useTranslation } from 'react-i18next'; 
 import { FaHandPointer } from "react-icons/fa6";
 

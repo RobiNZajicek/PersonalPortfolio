@@ -1,7 +1,8 @@
 
 import { useTranslation } from 'react-i18next';
-import { Link } from 'react-scroll';
+
 import { motion } from 'framer-motion';
+import { Link } from 'react-scroll';
 import {
   IconChevronDown,
   IconCode,
@@ -74,7 +75,7 @@ const mockdata = [
 export function HeaderMegaMenu() {
   const [drawerOpened, { toggle: toggleDrawer, close: closeDrawer }] = useDisclosure(false);
   const [linksOpened, { toggle: toggleLinks }] = useDisclosure(false);
-  const theme = useMantineTheme();
+
   const { t, i18n } = useTranslation();
 
   const toggleLanguage = (): void => {
