@@ -47,8 +47,8 @@ const About = () => {
              
               {t("about_text")}                           
               </p>
-            <div className='div-container mt-10'>
-            <a href={CV} download='' className=" mt-0 bg-purple-600  text-white font-bold py-2 px-4 rounded inline-flex items-center">
+            <div className='div-container mt-4'>
+            <a href={CV} download='' className=" mt-0 bg-purple-600  text-white font-bold py-2 px-4 rounded inline-flex items-center max-lg:text-xs">
             <svg className="fill-current w-4 h-4 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M13 8V2H7v6H2l8 8 8-8h-5zM0 18h20v2H0v-2z"/></svg>
             <span>{t("download_cv")}</span>
           </a>

@@ -21,7 +21,7 @@ const App = () => {
       <HeaderMegaMenu/>
       <Home/>
        <About/>
-       {/* <Line/> */}
+   
        <Experience/>
       <div className='container'>
       <Skills/>
@@ -30,14 +30,14 @@ const App = () => {
       </div>
       <Projects/>
       <div className='relative z-0 bg-primary div-fid'> 
-      {/* <Feedbacks/> */}
+
       </div>
      
-      {/* <CardGradientPage/> */}
+
       <div className='relative z-0 bg-primary div-fid'> 
       <Contact/>
       </div>
-      {/* <FooterCentered/> */}
+
       </I18nextProvider>
     </section>
   )

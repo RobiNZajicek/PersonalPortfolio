@@ -4,6 +4,7 @@ import xtb from '../assets/xtb.png'
   import txtGame from '../assets/txtGame.png'
   import dokumentace from '../assets/dokumentace/DokumentEmpty.pdf'
   import dokumentaceTrue from '../assets/dokumentace/Dokumentace.pdf'
+
 const frontEnd = [
     {
       name: "NaraWebs website",
@@ -151,7 +152,7 @@ const frontEnd = [
       key: "education_experience",
       title: "education_title",
       company_name: "technical_school_name",
-      icon: "",
+      icon:"" ,
       iconBg: "#383E56",
       date: "",
       points: [

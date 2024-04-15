@@ -129,3 +129,59 @@
     height: 3px;
     background-color: white;
 }
+@media(max-width:1482px){
+    .about{
+        height: 55vh;
+        
+        position: relative;
+        padding: 0 15.5%;
+    }
+    .about-container{
+        display: flex;
+        flex-direction: row;
+        
+    }
+    .about-par{
+        
+        width: 97%;
+        color: white ;
+        font-weight: 600;
+        font-size: 13px;
+    }
+    .about-left{
+        display: flex;
+        flex: 1;
+    }
+    .about-right{
+        padding-top: 5rem;
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+    }
+    .div-container{
+        display: flex;
+        flex-direction: row;
+        gap: 2rem;
+    }
+    .div-projects{
+    
+    }
+    .div-expirience{
+    
+    }
+    .div-more{
+    
+    }
+    @media (max-width: 1260px){
+        .about{
+          
+            padding: 0 10%;
+        }
+    }
+    @media (max-width: 1000px){
+        .about{
+          
+            padding: 0 6.7%;
+        }
+    }   
+}

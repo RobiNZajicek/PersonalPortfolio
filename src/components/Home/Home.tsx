@@ -43,12 +43,6 @@ const Home = () => {
       i18n.off('languageChanged', changeLanguage);
     };
   }, [i18n]);
-
-  const toggleLanguage = () => {
-    const newLanguage = language === 'en' ? 'cz' : 'en';
-    i18n.changeLanguage(newLanguage);
-  };
-
   const [isVisible, setIsVisible] = useState(false);
 
   const handleScroll = () => {
@@ -153,43 +147,44 @@ const Home = () => {
       clearTimeout(initialTimeout);
     };
   }, []); // Empty dependency array so it runs only on mount
-
-
+  
   return (
     <motion.div id='cardScroll' initial={{ opacity: 0, y: 100 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 4.5, type: 'spring' }} className='home'>
       <motion.div className='home-container'>
         <div className='home-container-left'>
           <h1 className='home-text'>{t("hi_text")} <span className="txt-rotate border-r-8 border-b" data-rotate='[ "Full Stack Developer", "Web Designer", "Robin", "" ]'><span className="wrap">{text}</span></span></h1>
-          <p className='home-par mt-4'>{t("intro_text")}</p>
-          <div className='  mt-6 px-2 frontend flex rounded-md  text-white  items-center flex-row bg-purple-700'>
-            <span className='font-semibold'>{t("front_end")}</span>
+          <p className='home-par mt-4'>{t("intro_text")}</p>  
+          <div className='shajt'>
+          <div className='  mt-6 px-2 frontend flex rounded-md  text-white  items-center flex-row bg-purple-700 max-xl:mt-2'>
+            <span className='font-semibold text-program'>{t("front_end")}</span>
             <div className='flex-wrap flex gap-2 p-2'>
               {frontEnd.map((tech) => (
                 <img key={tech.id} src={tech.src} alt={tech.alt} className='tech-icon' />
               ))}
             </div>
           </div>
-          <div className='  mt-4 flex rounded-md px-2   text-white  items-center flex-row bg-purple-700 backend'>
-            <span className='font-semibold'>{t("back_end")}</span>
+          <div className='  mt-4 flex rounded-md px-2   text-white  items-center flex-row bg-purple-700 backend max-xl:mt-2'>
+            <span className='font-semibold text-program'>{t("back_end")}</span>
             <div className='flex-wrap flex gap-2 p-2'>
               {BackEnd.map((tech) => (
                 <img key={tech.id} src={tech.src} alt={tech.alt} className='tech-icon ' />
               ))}
             </div>
           </div>
+          </div>
 
-          <div className='flex cursor-pointer absolute  items-center   flex-row gap-4 icns'>
-          <FaHandPointer className={`w-6 h-6 poiner-2  ${showPointer ? "opacity-100" : "opacity-0"}`} />
-            <a className='k h-16  w-16 flex justify-center items-center border-2-black rounded-full' href="https://www.linkedin.com/in/robin-zaj%C3%AD%C4%8Dek-86a537260/" target="_blank" rel="noreferrer">
-              <FaLinkedin className='w-12 h-12 fill-white cursor-pointer ' />
+          <motion.div  initial={{opacity:0,y:200}} animate={{opacity:1,y:0}} transition={{delay:2,duration:2 }} className='flex cursor-pointer absolute  items-center     flex-row gap-4 icns'>
+          <FaHandPointer className={`w-4 h-4 poiner-2  ${showPointer ? "opacity-100" : "opacity-0"}`} />
+            <a className=' h-16  w-16 flex justify-center items-center border-2-black rounded-full' href="https://www.linkedin.com/in/robin-zaj%C3%AD%C4%8Dek-86a537260/" target="_blank" rel="noreferrer">
+              <FaLinkedin className='w-12 h-12 fill-white cursor-pointer faos' />
             </a>
             <a href="https://github.com/RobiNZajicek" target="_blank" rel="noreferrer">
-              <FaGithub className='w-12 h-12 cursor-pointer' />
+              <FaGithub className='w-12 h-12 cursor-pointer faos ' />
             </a>
-            <FaHandPointer className={`w-6 h-6 poiner-1   ${showPointer ? "opacity-100" : "opacity-0"}`} />
-          </div>
+            <FaHandPointer className={`w-4 h-4 poiner-1   ${showPointer ? "opacity-100" : "opacity-0"}`} />
+          </motion.div>
         </div>
-        <div className='flex items-start justify-center home-container-right'>
+        <div className=' items-start justify-center  home-container-right'>
           <Lottie className='It-img mr-12' animationData={ITs} />
         </div>
       </motion.div>

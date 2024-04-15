@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-scroll';
 import { motion } from 'framer-motion';
@@ -102,10 +102,10 @@ export function HeaderMegaMenu() {
   ));
 
   return (
-    <Box pb={120}>
+    <Box pb={120} >
       <motion.header initial={{ opacity: 0 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 4.5, type: 'spring' }} className={classes.header}>
         <Group justify="space-between" h="100%">
-          <span className='font-bold text-white  text-2xl'>{t('Robin.dev')}</span>
+          <span className='font-bold text-white  text-2xl   max-2xl:text-xl  max-lg:text-base'>{t('Robin.dev')}</span>
 
           <Group h="100%" gap={0} visibleFrom="sm">
             <Link to='home' className={classes.link} spy={true} smooth={true} offset={-70} duration={500}>
@@ -160,13 +160,13 @@ export function HeaderMegaMenu() {
           </Group>
 
           <Group visibleFrom="sm">
-          <button onClick={toggleLanguage} className='bg-gradient-to-r border-2 border-purple-700 rounded-md w-12 h-9 font-bold  text-purple-700'>{languageButtonLabel}</button>
+          <button onClick={toggleLanguage} className='bg-gradient-to-r border-2 border-purple-700 rounded-md w-12 h-9 font-bold max-lg:w-7 max-lg:h-8 max-lg:text-xs    text-purple-700'>{languageButtonLabel}</button>
             <Link to='contact' spy={true} smooth={true} offset={-70} duration={500}>
-              <button className='bg-gradient-to-r bg-purple-700 rounded-md w-24 h-9 font-bold  text-white button-contact '>{t('Hire me')}</button>
+              <button className='bg-gradient-to-r bg-purple-700 rounded-md p-2 h-9 font-bold  max-lg:h-8 max-lg:text-xs   text-white button-contact '>{t('Hire me')}</button>
             </Link>
           </Group>
 
-          <Burger opened={drawerOpened} onClick={toggleDrawer} hiddenFrom="sm" />
+          <Burger opened={drawerOpened} className='text-white fill-white' onClick={toggleDrawer} hiddenFrom="sm" />
         </Group>
       </motion.header>
 
@@ -176,10 +176,11 @@ export function HeaderMegaMenu() {
         size="100%"
         padding="md"
         title="Navigation"
-        hiddenFrom="sm"
+       className="text-black"
         zIndex={1000000}
+        
       >
-        <ScrollArea h={`calc(100vh - ${rem(80)})`} mx="-md">
+        <ScrollArea className={classes.mobileSomePart}  h={`calc(100vh - ${rem(80)})`} mx="-md">
           <Divider my="sm" />
 
           <Link to='home' onClick={toggleDrawer} className={classes.link} spy={true} smooth={true} offset={-70} duration={500}>
@@ -203,7 +204,7 @@ export function HeaderMegaMenu() {
                 </Box>
                 <IconChevronDown
                   style={{ width: rem(16), height: rem(16) }}
-                  color={theme.colors.blue[6]}
+                  className={classes.parosos}
                 />
               </Center>
             </UnstyledButton>
@@ -217,8 +218,8 @@ export function HeaderMegaMenu() {
           <Divider my="sm" />
 
           <Group justify="center" grow pb="xl" px="md">
-            <button className='rounded-md border h-9'>{t('projects')}</button>
-            <button className='bg-gradient-to-r bg-blue-500 rounded-md w-32 h-9 font-bold text-white button-contact'>{t('Hire me')}</button>
+            <button onClick={toggleLanguage} className='bg-gradient-to-r border-2 border-purple-700 rounded-md w-12 h-9 font-bold max-lg:w-7 max-lg:h-8 max-lg:text-xs    text-purple-700'>{languageButtonLabel}</button>
+            <button className='bg-gradient-to-r bg-purple-700 rounded-md w-32 h-9 font-bold text-white button-contact'>{t('Hire me')}</button>
           </Group>
         </ScrollArea>
       </Drawer>

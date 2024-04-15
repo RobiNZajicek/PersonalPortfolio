@@ -113,11 +113,11 @@ const Works = () => {
   return (
     <section className="projectosss ">
       <motion.div key={animationKey} className="tfs" variants={textVariant}>
-        <p className={`${styles.sectionSubText} `}>{t("works")}</p>
+        <p className={`${styles.sectionSubText}`}>{t("works")}</p>
         <h2 className={`${styles.sectionHeadText}`}>{t("Projectsos")}</h2>
       </motion.div>
 
-      <div className='w-full flex'>
+      <div className=' flex'>
         <motion.p
           variants={fadeIn("", "", 0.1, 1)}
           className='mt-3 text-secondary text-[17px] font-semibold  max-w-3xl leading-[30px] w-3/5'
@@ -132,7 +132,7 @@ const Works = () => {
         <button className="tch-btn p-2 rounded-md" onClick={() => handleButtonClick(3)}>Full Stack</button>
       </div>
 
-      <div className='mt-20 flex flex-wrap gap-7 class'>
+      <div className='mt-20 flex flex-wrap gap-4 div-cards'>
         {projects.map((project, index) => (
           <ProjectCard  key={`project-${index}`} index={index} {...project} />
         ))}

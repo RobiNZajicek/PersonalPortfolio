@@ -6,6 +6,7 @@
   font-family: "Poppins", sans-serif;
   margin: 0;
   box-sizing: border-box;
+
 }
 
 body {
@@ -16,6 +17,11 @@ body {
 }
 .div-fid{
   margin-left: -10rem;
+}
+@media(max-width:1240px){
+  .div-fid{
+    margin-left: -4rem;
+  }
 }
 #bth-jg {
   border-radius: 8px;

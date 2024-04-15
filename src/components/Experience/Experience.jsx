@@ -30,8 +30,9 @@ const ExperienceCard = ({ experience }) => {
           <span
             src={experience.icon}
             alt={experience.company_name}
-            className='w-[60%] h-[60%] object-contain'
+            className='w-[90%] font-bold  h-[90%] object-contain'
           />
+        
         </div>
       }
     >

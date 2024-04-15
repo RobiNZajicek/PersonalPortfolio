@@ -10,7 +10,31 @@
 .projectosss{
     margin-left: -4rem;
     padding: -3rem;
-    width: 1300px;
+   
+   
+}
+.div-cards{
+    width:1300px;
+}
+@media(max-width:1375px){
+    .projectosss{
+        margin-left: -2rem;
+        width: 100vw;
+        padding: 0rem;
+  
+
+        
+    }
+}
+@media(max-width:640px){
+    .projectosss{
+        margin-left: -1rem;
+        width: 100vw;
+        padding: 0rem;
+  
+
+        
+    }
 }
 .div-cardss{
     
