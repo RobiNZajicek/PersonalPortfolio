@@ -28,7 +28,6 @@ import {
   Collapse,
   ScrollArea,
   rem,
-  useMantineTheme,
 } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 import classes from './HeaderMegaMenu.module.css';

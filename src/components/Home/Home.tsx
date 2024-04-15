@@ -41,6 +41,9 @@ const Home = () => {
       i18n.off('languageChanged', changeLanguage);
     };
   }, [i18n]);
+  console.log("Current language:", language); // Added line to log the current language
+
+  
   const [isVisible, setIsVisible] = useState(false);
 
   const handleScroll = () => {
@@ -87,11 +90,7 @@ const Home = () => {
     { id: 6, src: mongoDb, alt: 'MongoDB' },
     { id: 7, src: mySql, alt: 'MySQL' },
   ];
-  const Database = [
-    { id: 1, src: firebase, alt: 'Firebase' },
-    { id: 2, src: mongoDb, alt: 'MongoDB' },
-    { id: 3, src: mySql, alt: 'MySQL' },
-  ];
+  
 
   useEffect(() => {
     let ticker = setInterval(() => {
@@ -151,7 +150,7 @@ const Home = () => {
       <motion.div className='home-container'>
         <div className='home-container-left'>
           <h1 className='home-text'>{t("hi_text")} <span className="txt-rotate border-r-8 border-b" data-rotate='[ "Full Stack Developer", "Web Designer", "Robin", "" ]'><span className="wrap">{text}</span></span></h1>
-          <p className='home-par mt-4'>{t("intro_text")}</p>  
+          <p className='home-par mt-4'>{t("intro_text")} - Current Index: {index}</p>
           <div className='shajt'>
           <div className='  mt-6 px-2 frontend flex rounded-md  text-white  items-center flex-row bg-purple-700 max-xl:mt-2'>
             <span className='font-semibold text-program'>{t("front_end")}</span>
