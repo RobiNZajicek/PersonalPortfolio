@@ -3,7 +3,7 @@
     height: 55vh;
     
     position: relative;
-    padding: 0 18.7rem;
+    padding: 1rem 15.5%;
 }
 .about-container{
     display: flex;
@@ -129,6 +129,11 @@
     height: 3px;
     background-color: white;
 }
+.parss{
+    font-size: 2.25rem/* 36px */;
+    line-height: 2.5rem;
+    font-weight: 600;
+}
 @media(max-width:1482px){
     .about{
         height: 55vh;
@@ -172,6 +177,7 @@
     .div-more{
     
     }
+   
     @media (max-width: 1260px){
         .about{
           
@@ -184,4 +190,49 @@
             padding: 0 6.7%;
         }
     }   
+    @media (max-width: 1000px){
+        .about{
+          
+            padding: 0 6.7%;
+        }
+    }  @media (max-width: 1000px){
+        .about{
+          
+            padding: 0 6.7%;
+        }
+        .about-par{
+        
+            width: 97%;
+            color: white ;
+            font-weight: 600;
+            font-size: 10px;
+        }
+    }  
+    @media (max-width: 600px){
+        .about{
+          
+            padding: 0 6.7%;
+        }
+        .about{
+            height: auto;
+            
+            position: relative;
+            padding: 1rem 15.5%;
+        }
+        .about-container{
+            display: flex;
+            flex-direction: column;
+            
+        }
+        .about-par{
+        
+            width: 97%;
+            color: white ;
+            font-weight: 600;
+            font-size:11px;
+        }
+        .parss{
+            font-size: 25px;
+        }
+    } 
 }

@@ -7,6 +7,7 @@ import { useInView } from '../../UseInWiew';
 import { textVariant } from "../../utils/motion.js";
 import { useEffect,useState } from 'react';
 import { useTranslation } from 'react-i18next';
+
 const About = () => {
   const { t } = useTranslation(); // Use the useTranslation hook to access translations
   const [isVisible, setIsVisible] = useState(false);
@@ -42,7 +43,7 @@ const About = () => {
             <div className=' absolute bg-purple-700  blur-div'></div>
             <div className=' absolute bg-purple-700  blur-div-2'></div>
             <div className='ml-16'>
-              <span className='text-4xl font-semibold'>{t("about_me")}</span>
+              <span className=' parss'>{t("about_me")}</span>
               <p className='mt-4 about-par'>
              
               {t("about_text")}                           

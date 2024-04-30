@@ -113,7 +113,7 @@ const Works = () => {
   return (
     <section className="projectosss ">
       <motion.div key={animationKey} className="tfs" variants={textVariant}>
-        <p className={`${styles.sectionSubText}`}>{t("works")}</p>
+        <p className={`${styles.sectionSubText} `}>{t("works")}</p>
         <h2 className={`${styles.sectionHeadText}`}>{t("Projectsos")}</h2>
       </motion.div>
 

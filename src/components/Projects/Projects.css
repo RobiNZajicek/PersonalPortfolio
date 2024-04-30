@@ -9,22 +9,23 @@
 }
 .projectosss{
     margin-left: -4rem;
-    padding: -3rem;
-   
+   width: 70vw;
+  
    
 }
 .div-cards{
-    width:1300px;
+   width: 1300px;
 }
 @media(max-width:1375px){
     .projectosss{
         margin-left: -2rem;
-        width: 100vw;
+        width: 90vw;
         padding: 0rem;
-  
-
-        
+        margin-right: 0;   
     }
+    .div-cards{
+        width: 95%;
+     }
 }
 @media(max-width:640px){
     .projectosss{

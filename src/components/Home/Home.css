@@ -491,7 +491,7 @@
             .tech-icon{
                 
                 width: 0.9rem;
-                height: 0.9rem;
+                height: 0.9rem; 
             }
             .home{
                 height: 70vh;
@@ -514,7 +514,7 @@
             }
             .shajt{
                 display: flex;
-                flex-direction: row;
+                flex-direction: column;
                 gap: 2px;
                 margin-top: 1rem;
             }
@@ -539,7 +539,8 @@
             }
             
             .backend{
-                width: 250px;
+                
+                width: 275px;
                 height: 25px;
                 margin-top: 0px;
                 margin: 0;
@@ -596,6 +597,7 @@
                 
             } 
         }
+       
 .planet {
     position: absolute;
     width: 20px;
