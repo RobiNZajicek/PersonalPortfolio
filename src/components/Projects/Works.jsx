@@ -11,6 +11,7 @@ import { fadeIn, textVariant } from "../../utils/motion";
 import doc from '../../assets/docs.png';
 import { useInView } from "react-intersection-observer";
 import { useTranslation } from 'react-i18next';
+import web from '../../assets/world-wide-web.png';
 const ProjectCard = ({
   index,
   name,
@@ -18,7 +19,8 @@ const ProjectCard = ({
   tags,
   image,
   source_code_link,
-  dokumentation
+  dokumentation,
+  source_code_link_page
 }) => {
   const variants = fadeIn("up", "spring", index * 0.5, 0.75);
   const [ref, inView] = useInView({
@@ -40,13 +42,28 @@ const ProjectCard = ({
         className='bg-tertiary p-5 rounded-2xl   cardes'
       >
         <div className='relative w-full h-[230px]'>
-          <img
-            src={image}
-            alt='project_image'
-            className='w-full h-48 object-cover rounded-2xl'
-          />
+          
 
-          <div className='absolute inset-0 flex justify-end m-3 card-img_hover'>
+        <img
+    src={image}
+    alt='project_image'
+    className='w-full h-48 object-cover rounded-2xl'
+    style={{ pointerEvents: 'none' }}
+  />
+
+          
+          <div className='absolute inset-0 justify-between flex m-3 card-img_hover'>
+          <div
+              onClick={() => window.open(source_code_link_page, "_blank")}
+              className='black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer'
+            >
+              <img
+                src={web}
+                alt='source code'
+                className='w-32 h-10  object-contain bg-black rounded-full '
+              />
+              
+            </div>
             <div
               onClick={() => window.open(source_code_link, "_blank")}
               className='black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer'
@@ -56,20 +73,22 @@ const ProjectCard = ({
                 alt='source code'
                 className='w-32 h-10  object-contain bg-black rounded-full '
               />
+              
             </div>
+            
           </div>
         </div>
 
         <div className=' div-cardss'>
           <h3 className='text-white font-bold text-[24px]'>{name}</h3>
-          <p className='mt-2 text-secondary text-[14px]'>{description}</p>
+          <p className='mt-2 text-secondary text-[14px] max-sm:text-[13px]'>{description}</p>
         </div>
 
         <div className='mt-4 flex flex-wrap gap-2'>
           {tags.map((tag, index) => (
             <p
               key={`${name}-${tag.name}-${index}`}
-              className={`text-[14px] ${tag.color}`}
+              className={`text-[14px]   ${tag.color}`}
             >
               #{tag.name}
             </p>
@@ -125,7 +144,17 @@ const Works = () => {
           {t("text_pro")}
         </motion.p>
       </div>
-
+      <div className="flex gap-4 flex-col">
+        <div className="flex flex-row items-center gap-4">
+      <img src={web} className="h-14 w-14 " alt="" />
+      <span className="font-bold text-base">Click if you want to see the project in browser</span>
+      </div>
+      <div className="flex flex-row items-center gap-4">
+      <img src={GitHub} className="h-14 w-14 " alt="" />  
+      <span className="font-bold text-base">    Click if you want to see the project on GitHub</span>
+      </div>
+      
+      </div>
       <div className="flex flex-row mt-16 gap-4">
         <button className="tch-btn p-2 rounded-md" onClick={() => handleButtonClick(1)}>Front-End</button>
         <button className="tch-btn p-2 rounded-md" onClick={() => handleButtonClick(2)}>Back-End</button>

@@ -37,6 +37,28 @@
         
     }
 }
+@media(max-width:415px){
+    .projectosss{
+        margin-left: -1rem;
+        width: 100vw;
+        padding: 0rem;        
+    }
+   .cardes{
+        width: 99.9%;
+    }
+    .documentation-btn{
+        font-size: 12px;
+        height: 30px;
+    }
+    .sungeSunge{
+        font-size: 12px;
+    }
+    .tch-btn{
+        background: #7c5fe6;
+        width: 25%;
+        font-size: 12px;
+    }
+}
 .div-cardss{
     
     margin-top: -1rem;
@@ -48,4 +70,5 @@
 }
 .tch-btn{
     background: #7c5fe6;
+
 }

@@ -36,8 +36,10 @@ const About = () => {
     animate={ isVisible?{opacity:1,y:0}:{opacity:0,y:50}}
     transition={{ duration: 2.5, type:'spring',delay:0.2 }} className='about '>
         <div className='about-container'>
-          <div className='about-left'>
-              <img src="" alt="" />
+          <div className='about-left flex items-center'>
+              <span className='font-bold text-2xl'>
+                Zde bude obrazek me !!! fotka
+              </span>
           </div>
           <div className='about-right'>
             <div className=' absolute bg-purple-700  blur-div'></div>

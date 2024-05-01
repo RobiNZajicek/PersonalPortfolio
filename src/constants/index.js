@@ -29,6 +29,7 @@ const frontEnd = [
       dokumentation:dokumentace,
       image: Nara,
       source_code_link: "https://github.com/RobiNZajicek/NaraTs",
+      source_code_link_page:"https://narawebs.com/"
     },
     
       {
@@ -52,6 +53,7 @@ const frontEnd = [
         dokumentation:dokumentace,
         image: xtb,
         source_code_link: "https://github.com/RobiNZajicek/Trading-Portfolio-App",
+        source_code_link_page:""
       },
       {
         name: "Random website",
@@ -145,6 +147,7 @@ const frontEnd = [
       dokumentation:dokumentace,
       image: cardsss,
       source_code_link: "https://github.com/RobiNZajicek/musle-cards",
+      source_code_link_page:"https://cards-j8kl.vercel.app/"
     },
   ]
   const experiences = [
