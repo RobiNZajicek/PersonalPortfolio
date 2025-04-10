@@ -19,7 +19,7 @@ import java from '../../assets/java.png';
 import mongoDb from '../../assets/mogoDb.webp';
 import ts from '../../assets/typescript.png';
 
-import its from '../../assets/Its.json'
+import its from '../../assets/patapim.json'
 import Lottie from 'lottie-react';
 import BoostStrap from '../../assets/bootstrap.png';
 
