@@ -3,8 +3,7 @@
   padding-left: var(--mantine-spacing-md);
   padding-right: var(--mantine-spacing-md);
   border-bottom: rem(1px) solid light-dark(var(--mantine-color-gray-3), var(--mantine-color-dark-4));
-  
-  background-image: linear-gradient(to right, #060417, #1a0f34 65%, #2e1951 75%, #47276f 90%, #61418d 100%, #7a5daf);
+  --background: #00060E;
   padding: 1rem 15.5%;
 
   
@@ -76,7 +75,7 @@
     font-size: 12px;
   }
   .parosos{
-    color: #7c66e3;
+    color: #3b82f6;
   }
   .link {
     display: flex;
@@ -126,7 +125,7 @@
     font-size: 12px;
   }
   .parosos{
-    color: #7c66e3;
+    color: #3b82f6;
   }
   .link {
     display: flex;
@@ -169,7 +168,7 @@
     font-size: 15px;
   }
   .parosos{
-    color: #7c66e3;
+    color: #3b82f6;
   }
   .link {
     display: flex;
@@ -187,7 +186,7 @@
   }
 }
 .parosos{
-  color: #7c66e3;
+  color: #3b82f6;
 }
 
 .subLink {

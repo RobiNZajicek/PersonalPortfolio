@@ -17,14 +17,15 @@ const ExperienceCard = ({ experience }) => {
   const { t } = useTranslation(); // Use the useTranslation hook to access translations
   return (
     <VerticalTimelineElement
+    
       contentStyle={{
-        background: 'linear-gradient(180deg, #aa94fe 0%, #7c5fe6 100%)',backgroundSize:'cover',backgroundRepeat:'no-repeat',
+        background: '#3b82f6',backgroundSize:'cover',backgroundRepeat:'no-repeat',
         color: "black",
      
       }}
-      contentArrowStyle={{ borderRight: "7px solid  #805ad5" }}
-      date={<span style={{ fontWeight: 'bold', color: '#805ad5' }}>{experience.date}</span>}
-      iconStyle={{ background: '#805ad5'}}
+      contentArrowStyle={{ borderRight: "7px solid  white" }}
+      date={<span style={{ fontWeight: 'bold', color: '#3b82f6' }} >{experience.date}</span>}
+      iconStyle={{ background: '#3b82f6'}}
       icon={
         <div className='black flex justify-center items-center w-full h-full'>
           <span
@@ -37,7 +38,7 @@ const ExperienceCard = ({ experience }) => {
       }
     >
       <div>
-        <h3 className='font-ed text-[34px] font-extrabold'>{t(experience.title)}</h3>
+        <h3 className='font-ed text-[34px] font-extrabold glow-textos'>{t(experience.title)}</h3>
         <h2
           className='  text-[20px] text-white font-bold'
           style={{ margin: 0 }}
@@ -66,10 +67,10 @@ const Experience = () => {
   return (
     <section id="experience" className='works'>
       <motion.div variants={textVariant()} >
-        <p className={`${styles.sectionSubText} text-center text-purple-700`}>
+        <p className={`${styles.sectionSubText} text-center text-blue-500`}>
          {t("experience_subtext")}
         </p>
-        <h2 className={`${styles.sectionHeadText} text-center `}>
+        <h2 className={`${styles.sectionHeadText} text-center glow-text`}>
           {t("experience_title")}   
         </h2>
       </motion.div>

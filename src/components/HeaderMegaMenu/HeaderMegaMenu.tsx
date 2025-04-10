@@ -87,13 +87,13 @@ export function HeaderMegaMenu() {
     <UnstyledButton className={classes.subLink} key={item.title}>
       <Group wrap="nowrap" align="flex-start">
         <ThemeIcon size={34} variant="default" radius="md">
-          <item.icon style={{ width: rem(22), height: rem(22) }} color="#7c5fe6" />
+          <item.icon style={{ width: rem(22), height: rem(22) }} color="#3b82f6" />
         </ThemeIcon>
         <div>
           <Text className='text-white ' size="sm" fw={500}>
             {item.title}
           </Text>
-          <Text size="xs" c="dimmed">
+          <Text className='text-white' size="xs" >
             {item.description}
           </Text>
         </div>
@@ -138,10 +138,10 @@ export function HeaderMegaMenu() {
                 </a>
               </HoverCard.Target>
 
-              <HoverCard.Dropdown style={{ overflow: 'hidden', background: '#060417' }}>
+              <HoverCard.Dropdown style={{ overflow: 'hidden', background: '#3b82f6' }}>
                 <Group justify="space-between" px="md">
-                  <Text fw={500} className='text-white'>{t('projects')}</Text>
-                  <Anchor href="#" className='text-purple-700' fz="xs">
+                  <Text fw={500} className='text-white font-bold '>{t('Projects')}</Text>
+                  <Anchor href="#" className='bg-white p-2 rounded-md' fz="xs">
                     <Link to='projects' spy={true} smooth={true} offset={-70} duration={500}>{t('View all')}</Link>
                   </Anchor>
                 </Group>
@@ -160,9 +160,9 @@ export function HeaderMegaMenu() {
           </Group>
 
           <Group visibleFrom="sm">
-          <button onClick={toggleLanguage} className='bg-gradient-to-r border-2 border-purple-700 rounded-md w-12 h-9 font-bold max-lg:w-7 max-lg:h-8 max-lg:text-xs    text-purple-700'>{languageButtonLabel}</button>
+          <button onClick={toggleLanguage} className='bg-gradient-to-r border-2 border-blue-500 rounded-md w-12 h-9 font-bold max-lg:w-7 max-lg:h-8 max-lg:text-xs    text-blue-500'>{languageButtonLabel}</button>
             <Link to='contact' spy={true} smooth={true} offset={-70} duration={500}>
-              <button className='bg-gradient-to-r bg-purple-700 rounded-md p-2 h-9 font-bold  max-lg:h-8 max-lg:text-xs   text-white button-contact '>{t('Hire me')}</button>
+              <button className='bg-gradient-to-r bg-blue-500 rounded-md p-2 h-9 font-bold  max-lg:h-8 max-lg:text-xs   text-white button-contact '>{t('Hire me')}</button>
             </Link>
           </Group>
 
@@ -218,8 +218,8 @@ export function HeaderMegaMenu() {
           <Divider my="sm" />
 
           <Group justify="center" grow pb="xl" px="md">
-            <button onClick={toggleLanguage} className='bg-gradient-to-r border-2 border-purple-700 rounded-md w-12 h-9 font-bold max-lg:w-7 max-lg:h-8 max-lg:text-xs    text-purple-700'>{languageButtonLabel}</button>
-            <button className='bg-gradient-to-r bg-purple-700 rounded-md w-32 h-9 font-bold text-white button-contact'>{t('Hire me')}</button>
+            <button onClick={toggleLanguage} className='bg-gradient-to-r border-2 bg-blue-500 rounded-md w-12 h-9 font-bold max-lg:w-7 max-lg:h-8 max-lg:text-xs    text-blue-500'>{languageButtonLabel}</button>
+            <button className='bg-gradient-to-r bg-blue-500 rounded-md w-32 h-9 font-bold text-white button-contact'>{t('Hire me')}</button>
           </Group>
         </ScrollArea>
       </Drawer>

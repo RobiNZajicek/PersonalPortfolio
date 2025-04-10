@@ -19,7 +19,7 @@ import java from '../../assets/java.png';
 import mongoDb from '../../assets/mogoDb.webp';
 import ts from '../../assets/typescript.png';
 
-import ITs from '../../assets/ITs.json';
+import ITs from '../../assets/Its.json';
 import Lottie from 'lottie-react';
 import BoostStrap from '../../assets/bootstrap.png';
 
@@ -69,7 +69,7 @@ const Home = () => {
   const [text, setText] = useState('');
   const [delta, setDelta] = useState(300 - Math.random() * 100);
   const [index, setIndex] = useState(1);
-  const toRotate = [t("Robin Zajíček"), t("Full Stack Developer"), t("Web Designer")];
+  const toRotate = [t("Robin Zajíček"), t("Full Stack Dev."), t("Web Designer")];
   const period = 1000;
   const frontEnd = [
     { id: 1, src: html, alt: 'HTML' },
@@ -147,21 +147,34 @@ const Home = () => {
   
   return (
     <motion.div id='cardScroll' initial={{ opacity: 0, y: 100 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 4.5, type: 'spring' }} className='home'>
+     <motion.div
+        className='blursses'
+        
+      />
       <motion.div className='home-container'>
+      
         <div className='home-container-left'>
-          <h1 className='home-text'>{t("hi_text")} <span className="txt-rotate border-r-8 border-b" data-rotate='[ "Full Stack Developer", "Web Designer", "Robin", "" ]'><span className="wrap">{text}</span></span></h1>
+        <motion.div  initial={{opacity:0,y:-10}} animate={{opacity:1,y:0}} transition={{delay:2,duration:2 }} className='flex flex-row'>
+            <a className=' h-16  w-16 flex justify-center items-center border-2-black rounded-full' href="https://www.linkedin.com/in/robin-zaj%C3%AD%C4%8Dek-86a537260/" target="_blank" rel="noreferrer">
+              <FaLinkedin className='w-12 h-12 fill-white cursor-pointer faos' />
+            </a>
+            <a href="https://github.com/RobiNZajicek" target="_blank" rel="noreferrer">
+              <FaGithub className='w-12 h-12 cursor-pointer faos ' />
+            </a>
+          </motion.div>
+          <h1 className='text-[20px] sm:text-[25px] md:text-[30px] lg:text-[35px] xl:text-[40px] font-orbion font-black glow-text'>{t("hi_text")} <span className=" glow-text text-[20px]  sm:text-[25px] md:text-[30px] lg:text-[35px] xl:text-[40px] font-orbion font-black border-r-8 border-b" data-rotate='[ "Full Stack Dev.", "Web Designer", "Robin", "" ]'><span className="wrap">{text}</span></span></h1>
           <p className='home-par mt-4 '>{t("intro_text")}<span className='hidden'>{index}</span></p>
           <div className='shajt'>
-          <div className='  mt-6 px-2 frontend flex rounded-md  text-white  items-center flex-row bg-purple-700 max-xl:mt-2'>
-            <span className='font-semibold text-program'>{t("front_end")}</span>
+          <div className='  mt-6 px-2 frontend flex rounded-md  text-white  items-center flex-row  max-xl:mt-2'>
+            <span className='font-semibold text-[12px]'>{t("front_end")}</span>
             <div className='flex-wrap flex gap-2 p-2'>
               {frontEnd.map((tech) => (
                 <img key={tech.id} src={tech.src} alt={tech.alt} className='tech-icon' />
               ))}
             </div>
           </div>
-          <div className='  mt-4 flex rounded-md px-2   text-white  items-center flex-row bg-purple-700 backend max-xl:mt-2'>
-            <span className='font-semibold text-program'>{t("back_end")}</span>
+          <div className='  mt-4 flex rounded-md px-2   text-white  items-center flex-row  backend max-xl:mt-2'>
+            <span className='font-semibold text-[12px]'>{t("back_end")}</span>
             <div className='flex-wrap flex gap-2 p-2'>
               {BackEnd.map((tech) => (
                 <img key={tech.id} src={tech.src} alt={tech.alt} className='tech-icon ' />
@@ -170,16 +183,7 @@ const Home = () => {
           </div>
           </div>
 
-          <motion.div  initial={{opacity:0,y:200}} animate={{opacity:1,y:0}} transition={{delay:2,duration:2 }} className='flex cursor-pointer absolute  items-center     flex-row gap-4 icns'>
-          <FaHandPointer className={`w-4 h-4 poiner-2  ${showPointer ? "opacity-100" : "opacity-0"}`} />
-            <a className=' h-16  w-16 flex justify-center items-center border-2-black rounded-full' href="https://www.linkedin.com/in/robin-zaj%C3%AD%C4%8Dek-86a537260/" target="_blank" rel="noreferrer">
-              <FaLinkedin className='w-12 h-12 fill-white cursor-pointer faos' />
-            </a>
-            <a href="https://github.com/RobiNZajicek" target="_blank" rel="noreferrer">
-              <FaGithub className='w-12 h-12 cursor-pointer faos ' />
-            </a>
-            <FaHandPointer className={`w-4 h-4 poiner-1   ${showPointer ? "opacity-100" : "opacity-0"}`} />
-          </motion.div>
+          
         </div>
         <div className=' items-start justify-center  home-container-right'>
           <Lottie className='It-img mr-12' animationData={ITs} />
