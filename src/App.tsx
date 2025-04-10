@@ -2,7 +2,6 @@
 import { HeaderMegaMenu } from './components/HeaderMegaMenu/HeaderMegaMenu';
 import Home from './components/Home/Home';
 import Proces from './components/Proces/Proces';
-import Skills from './components/Skills/Skills';;
 import Experience from './components/Experience/Experience';
 import KontaktForm from './components/KontaktForm/KontaktForm'
 import { I18nextProvider } from 'react-i18next';

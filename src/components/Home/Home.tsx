@@ -19,13 +19,12 @@ import java from '../../assets/java.png';
 import mongoDb from '../../assets/mogoDb.webp';
 import ts from '../../assets/typescript.png';
 
-import ITs from '../../assets/Its.json';
+import its from '../../assets/Its.json'
 import Lottie from 'lottie-react';
 import BoostStrap from '../../assets/bootstrap.png';
 
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next'; 
-import { FaHandPointer } from "react-icons/fa6";
 
 const Home = () => {
   const { t, i18n } = useTranslation();
@@ -130,6 +129,8 @@ const Home = () => {
     // Function to toggle the opacity of the mouse pointer icon
     const toggleOpacity = () => {
       setShowPointer((prev) => !prev);
+      console.log(showPointer);
+      
     };
 
     // Initial toggle after 1 second
@@ -186,7 +187,7 @@ const Home = () => {
           
         </div>
         <div className=' items-start justify-center  home-container-right'>
-          <Lottie className='It-img mr-12' animationData={ITs} />
+          <Lottie className='It-img mr-12' animationData={its} />
         </div>
       </motion.div>
     </motion.div>
