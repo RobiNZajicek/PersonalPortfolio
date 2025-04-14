@@ -13,7 +13,7 @@
   "Hire me": "Napište mi",
   "about_me": "O mně",
   "about_text": "Ahoj, jsem Robin—full stack developer, který sochařsky tvoří digitální krajinu. Vynikám v tvorbě bezproblémových uživatelských zážitků, od front-end záření po efektivitu back-endu. Ponořte se se mnou do světa kódu, kde každý řádek nese potenciál pro magii a inovaci!  💻✨",
-  "download_cv": "Stáhnout životopis",
+  "download_cv": "Životopis",
   "experience_subtext": "Moje vzdělání a práce",
   "experience_title": "Zkušenosti",
   "education_title": "Vzdělání",
@@ -69,5 +69,52 @@
     
     "your_email_placeholder": "Jaký je váš e-mail?",
     
-    "your_message_placeholder": "Co chcete říct?"
+    "your_message_placeholder": "Co chcete říct?",
+    
+      "why_work_with_me": "Proč pracovat se mnou",
+      "experience_brief": "X let ověřené praxe v oboru",
+      "approach": "Přístup",
+      "approach_brief": "Individuální řešení pro každého klienta",
+      "tech_stack": "Technologie",
+      "tech_stack_brief": "Moderní technologie a osvědčené postupy",
+      "reliability": "Spolehlivost",
+      "reliability_brief": "K práci přistupuji zodpovědně ",
+      
+        "my_projects": "Moje projekty",
+        "projects_intro": "Moje projekty pokrývají široké spektrum znalostí – od elegantních statických webů přes pokročilé databázové systémy až po interaktivní 3D aplikace. Každý projekt odráží můj důraz na čistý kód, responzivní design a uživatelskou přívětivost.",
+        "narawebs_description": "Firemní prezentace pro moji webovou agenturu NaraWebs. Moderní, rychlý a responzivní web, kde nabízím služby a ukazuji své dovednosti.",
+        "sheel_description": "Zakázková aplikace, která generuje a tiskne personalizované karty podle formuláře. Napojení na databázi pro správu záznamů.",
+        "striking_description": "Komplexní web pro sportovní klub – registrace, správa tréninků, přehledy a rozhraní pro správce i členy.",
+        "pension_description": "Jednoduchý a elegantní web pro penzion. Nabízí přehledné informace o ubytování a umožňuje rychlý kontakt.",
+        "3d_description": "Interaktivní web, kde uživatel nahrává 3D model, nastavuje parametry a posílá ho do fronty na tisk. Obsahuje i napojení na hardware.",
+        "fyzio_description": "Přehledný a funkční web pro fyzioterapii. Obsahuje informace o službách, možnost rezervace a responzivní prostředí.",
+        
+          "contact_heading": "Kontakt",
+          "your_name_placeholder": "Vaše jméno",
+          "your_email_placeholder": "Váš e-mail",
+          "your_message_placeholder": "Napište zprávu...",
+          "send_button": "Odeslat",
+          "sending_button": "Odesílání...",
+          "contact_success": "Zpráva byla zaslána",
+          "contact_fail": "Odeslání zprávy selhalo, zkuste to znovu.",
+          "contact_phone": "Telefonní číslo",
+          "contact_email": "E-mailová adresa",
+          "contact_address": "Adresa",
+          "contact_heading": "Kontakt",
+          "your_name_placeholder": "Vaše jméno",
+          "your_email_placeholder": "Váš e-mail",
+          "your_message_placeholder": "Napište zprávu...",
+          "send_button": "Odeslat",
+          "sending_button": "Odesílání...",
+          "contact_success": "Zpráva byla zaslána",
+          "contact_fail": "Odeslání zprávy selhalo, zkuste to znovu.",
+          "contact_phone": "Telefonní číslo",
+          "contact_email": "E-mailová adresa",
+          "contact_address": "Adresa"
+        
+        
+      
+      
+    
+    
 }

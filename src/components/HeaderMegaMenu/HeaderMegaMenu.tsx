@@ -32,42 +32,48 @@ import {
 import { useDisclosure } from '@mantine/hooks';
 import classes from './HeaderMegaMenu.module.css';
 
-const mockdata = [
+export const projects = [
   {
-    id:"1",
+    id: "1",
+    name: "NaraWebs",
+    description: "Business website for my web agency NaraWebs.",
     icon: IconCode,
-    title: 'NaraWebs website',
-    description: 'This project is website of my webdesign comapny NaraWebs ',
+    link: 'https://narawebs.com',
   },
   {
-    id:"2",
-    icon: IconFingerprint,
-    title: 'Random webiste',
-    description: 'The shell’s rounded shape and the grooves on its.',
-  },
-  {
-    id:"3",
-    icon: IconNotification,
-    title: 'Random website',
-    description: 'Combusken battles with the intensely hot flames it spews',
-  },
-  {
-    id:"4",
-    icon: IconChartPie3,
-    title: 'Text Game',
-    description: 'This Pokémon uses its flying ability to quickly chase',
-  },
-  {
-    id:"5",
-    icon: IconCoin,
-    title: 'Fullstack trading portfolio',
-    description: 'Profesional trading portfolio ',
-  },
-  {
-    id:"6",
+    id: "2",
+    name: "Sheel App",
+    description: "App that generates and prints personalized cards.",
     icon: IconBook,
-    title: 'Cards App',
-    description: 'App for a company that is selling shells with product databasez',
+    link: 'https://vercel.com/zajicekrobin3gmailcoms-projects/cards-j8kl',
+  },
+  {
+    id: "3",
+    name: "Striking",
+    description: "Website for a sports club with registration system.",
+    icon: IconChartPie3,
+    link: 'https://praguestrikingacademy.cz/',
+  },
+  {
+    id: "4",
+    name: "Pension U Papoušků",
+    description: "Clean and informative website for a guesthouse.",
+    icon: IconFingerprint,
+    link: 'https://www.upapousku.cz/',
+  },
+  {
+    id: "5",
+    name: "3D Website",
+    description: "Interactive site for 3D printing – network project.",
+    icon: IconNotification,
+    link: '', // unfinished project
+  },
+  {
+    id: "6",
+    name: "Physiotherapy",
+    description: "Website for a physiotherapy center with booking system.",
+    icon: IconCoin,
+    link: '', // unfinished project
   },
 ];
 
@@ -83,23 +89,30 @@ export function HeaderMegaMenu() {
     i18n.changeLanguage(newLanguage);
   };
   const languageButtonLabel = i18n.language === 'en' ? 'CZ' : 'EN';
-  const links = mockdata.map((item) => (
-    <UnstyledButton className={classes.subLink} key={item.title}>
-      <Group wrap="nowrap" align="flex-start">
-        <ThemeIcon size={34} variant="default" radius="md">
-          <item.icon style={{ width: rem(22), height: rem(22) }} color="#3b82f6" />
-        </ThemeIcon>
-        <div>
-          <Text className='text-white ' size="sm" fw={500}>
-            {item.title}
-          </Text>
-          <Text className='text-white' size="xs" >
-            {item.description}
-          </Text>
-        </div>
-      </Group>
-    </UnstyledButton>
-  ));
+
+const links = projects.map((item) => (
+  <Anchor
+    key={item.id}
+    href={item.link !== '' ? item.link : '/coming-soon'}
+    target="_blank"
+    className={classes.subLink}
+  >
+    <Group wrap="nowrap" align="flex-start">
+      <ThemeIcon size={34} variant="default" radius="md">
+        <item.icon style={{ width: rem(22), height: rem(22) }} color="#3b82f6" />
+      </ThemeIcon>
+      <div>
+        <Text className="text-white" size="sm" fw={500}>
+          {item.name}
+        </Text>
+        <Text className="text-white" size="xs">
+          {item.description}
+        </Text>
+      </div>
+    </Group>
+  </Anchor>
+));
+
 
   return (
     <Box pb={120} >
@@ -117,9 +130,7 @@ export function HeaderMegaMenu() {
             <Link to='experience' className={classes.link} spy={true} smooth={true} offset={-70} duration={500}>
               {t('Experience')}
             </Link>
-            <Link to='skills-container' className={classes.link} spy={true} smooth={true} offset={-70} duration={500}>
-              {t('Skills')}
-            </Link>
+          
 
             <HoverCard width={600} position="bottom" radius="md" shadow="md" withinPortal>
               <HoverCard.Target>
@@ -192,9 +203,7 @@ export function HeaderMegaMenu() {
           <Link to='experience' className={classes.link} spy={true} smooth={true} offset={-70} duration={500}>
             {t('Experience')}
           </Link>
-          <Link to='skills-container' onClick={toggleDrawer} className={classes.link} spy={true} smooth={true} offset={-70} duration={500}>
-            {t('Skills')}
-          </Link>
+          
 
           <Link to="projects" spy={true} smooth={true} offset={-70} duration={500} onClick={toggleDrawer} className={classes.linkos}>
             <UnstyledButton className={classes.link} onClick={toggleLinks}>

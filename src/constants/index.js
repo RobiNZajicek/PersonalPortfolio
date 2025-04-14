@@ -166,20 +166,20 @@ const frontEnd = [
         "education_point_4"
       ],
     },
-    {
-      key: "college_experience",
-      title: "college_title",
-      img:'',
-      company_name: "random_college_name",
-      icon: "",
-      iconBg: "#E6DEDD",
-      date: "",
-      points: [
-        "college_point_1",
-        "college_point_2",
-        "college_point_3"
-      ],
-    },
+    // {
+    //   key: "college_experience",
+    //   title: "college_title",
+    //   img:'',
+    //   company_name: "random_college_name",
+    //   icon: "",
+    //   iconBg: "#E6DEDD",
+    //   date: "",
+    //   points: [
+    //     "college_point_1",
+    //     "college_point_2",
+    //     "college_point_3"
+    //   ],
+    // },
     {
       key: "pied_piper_experience",
       title: "pied_piper_title",

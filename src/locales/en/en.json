@@ -69,5 +69,54 @@
     
     "your_email_placeholder": "What's your web address?",
    
-    "your_message_placeholder": "What you want to say?"
+    "your_message_placeholder": "What you want to say?",
+   
+      "why_work_with_me": "Why Work With Me",
+      "experience_brief": "X years of proven industry experience",
+      "approach": "Approach",
+      "approach_brief": "Custom solutions for each client",
+      "tech_stack": "Tech Stack",
+      "tech_stack_brief": "Modern technologies and best practices",
+      "reliability": "Reliability",
+      "reliability_brief": "On-time delivery and quality results",
+      
+        "my_projects": "My Projects",
+        "projects_intro": "My projects cover a wide range of skills—from elegant static websites to advanced database systems and interactive 3D apps. Each project reflects my focus on clean code, responsive design, and user experience.",
+        "narawebs_description": "A business presentation for my web agency NaraWebs. A modern, fast, and responsive website where I offer my services and showcase my skills through a real product.",
+        "sheel_description": "A custom-built app that creates and prints personalized cards based on user input, with a connected database for record management.",
+        "striking_description": "A comprehensive website for a sports club, including a registration system, training management, and admin/member dashboards.",
+        "pension_description": "A clean, elegant website for a small guesthouse. Offers clear information and fast contact for bookings.",
+        "3d_description": "An interactive app that allows users to upload 3D models and send them to a print queue. Includes frontend + hardware integration.",
+        "fyzio_description": "A visually clean and functional site for a physiotherapy center with booking, service info, and responsive UI for all users.",
+          "contact_heading": "Contact",
+          "your_name_placeholder": "Your name",
+          "your_email_placeholder": "Your email",
+          "your_message_placeholder": "Write your message...",
+          "send_button": "Send",
+          "sending_button": "Sending...",
+          "contact_success": "Message sent successfully",
+          "contact_fail": "Failed to send message, try again.",
+          "contact_phone": "Phone number",
+          "contact_email": "Email address",
+          "contact_address": "Address",
+     
+            "contact_heading": "Contact",
+            "your_name_placeholder": "Your name",
+            "your_email_placeholder": "Your email",
+            "your_message_placeholder": "Write your message...",
+            "send_button": "Send",
+            "sending_button": "Sending...",
+            "contact_success": "Message sent successfully",
+            "contact_fail": "Failed to send message, try again.",
+            "contact_phone": "Phone number",
+            "contact_email": "Email address",
+            "contact_address": "Address"
+        
+          
+        
+        
+      
+      
+    
+    
 }

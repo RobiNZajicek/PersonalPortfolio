@@ -24,7 +24,7 @@ const ExperienceCard = ({ experience }) => {
      
       }}
       contentArrowStyle={{ borderRight: "7px solid  white" }}
-      date={<span style={{ fontWeight: 'bold', color: '#3b82f6' }} >{experience.date}</span>}
+      date={<span  style={{ fontWeight: 'bold', color: '#3b82f6',zIndex:'20'}} >{t(experience.title)} </span>}
       iconStyle={{ background: '#3b82f6'}}
       icon={
         <div className='black flex justify-center items-center w-full h-full'>
@@ -38,13 +38,8 @@ const ExperienceCard = ({ experience }) => {
       }
     >
       <div>
-        <h3 className='font-ed text-[34px] font-extrabold glow-textos'>{t(experience.title)}</h3>
-        <h2
-          className='  text-[20px] text-white font-bold'
-          style={{ margin: 0 }}
-        >
-         <span className="text-white">{t(experience.company_name)}</span> 
-        </h2>
+        <h3 className='font-ed text-[25px] font-extrabold glow-textos'>{t(experience.company_name)}</h3>
+        
       </div>
 
       <ul className='mt-5 text-white list-disc ml-5 space-y-2'>
@@ -65,7 +60,11 @@ const Experience = () => {
   const { t } = useTranslation(); // Use the useTranslation hook to access translations
 
   return (
-    <section id="experience" className='works'>
+    <section id="experience" className='works relative'>
+      <motion.div
+              className='bluros blurss3'
+           
+            />
       <motion.div variants={textVariant()} >
         <p className={`${styles.sectionSubText} text-center text-blue-500`}>
          {t("experience_subtext")}
@@ -84,6 +83,10 @@ const Experience = () => {
             />
           ))}
         </VerticalTimeline>
+        <motion.div
+                className='bluros blurss2'
+   
+              />
       </div>
     </section>
   );

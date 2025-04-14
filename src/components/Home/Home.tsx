@@ -156,7 +156,7 @@ const Home = () => {
       
         <div className='home-container-left'>
         <motion.div  initial={{opacity:0,y:-10}} animate={{opacity:1,y:0}} transition={{delay:2,duration:2 }} className='flex flex-row'>
-            <a className=' h-16  w-16 flex justify-center items-center border-2-black rounded-full' href="https://www.linkedin.com/in/robin-zaj%C3%AD%C4%8Dek-86a537260/" target="_blank" rel="noreferrer">
+            <a className=' h-16  w-16 flex justify-center items-center border-2-black rounded-full' href="https://www.linkedin.com/public-profile/settings?trk=d_flagship3_profile_self_view_public_profile" target="_blank" rel="noreferrer">
               <FaLinkedin className='w-12 h-12 fill-white cursor-pointer faos' />
             </a>
             <a href="https://github.com/RobiNZajicek" target="_blank" rel="noreferrer">

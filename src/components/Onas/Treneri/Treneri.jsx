@@ -10,65 +10,16 @@ import tri from '../../../assets/3d.png'
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import "./Treneri.css";
+import { useTranslation } from 'react-i18next';
 
-const trainers = [
-  {
-    name: "NaraWebs",
-    sport: "Website",
-    image: Nara,
-    linkGit: '',
-    webLink: 'https://narawebs.com',
-    description:
-      "Firemní prezentace mé webové agentury NaraWebs. Moderní, rychlý a responzivní web, kde nabízím své služby a ukazuji své schopnosti na reálném produktu.",
-  },
-  {
-    name: "Sheel App",
-    sport: "App for cards",
-    image: Card,
-    linkGit: 'https://github.com/RobiNZajicek/cards',
-    webLink: 'https://vercel.com/zajicekrobin3gmailcoms-projects/cards-j8kl',
-    description:
-      "Aplikace vytvořená na míru pro firmu, která generuje a tiskne personalizované kartičky na základě formuláře. Data se ukládají do databáze, odkud je může firma kdykoli spravovat.",
-  },
-  {
-    name: "Striking",
-    sport: "Website with database",
-    linkGit: 'https://github.com/RobiNZajicek/Striking',
-    webLink: 'https://praguestrikingacademy.cz/',
-    image: Striking,
-    description:
-      "Kompletní web pro sportovní klub s registračním systémem, správou tréninků, přehledem plateb a uživatelským rozhraním pro majitele i členy. Postaveno s důrazem na funkčnost a jednoduchost použití.",
-  },
-  {
-    name: "Penzion U Papoušků",
-    sport: "Website",
-    image: Upapousku,
-    linkGit: '',
-    webLink: 'https://www.upapousku.cz/',
-    description:
-      "Jednoduchý a elegantní web pro menší penzion. Prezentuje ubytování, poskytuje základní informace a umožňuje rychlý kontakt pro rezervace.",
-  },
-  {
-    name: "3D Website",
-    sport: "Project for networks",
-    image: tri,
-    linkGit: 'https://github.com/RobiNZajicek/3D-websiteRobinTom',
-    webLink: '',
-    description:
-      "Interaktivní webová aplikace, kde si uživatel nahraje 3D model, nastaví parametry tisku a odešle soubor do fronty na 3D tisk. Projekt zahrnuje front-end i napojení na reálné zařízení.",
-  },
-  {
-    name: "Fyzioterapie",
-    sport: "Website",
-    image: Nara,
-    linkGit: 'https://github.com/RobiNZajicek/fyz-web',
-    webLink: '',
-    description:
-      "Designově čistý a přehledný web pro fyzioterapeutické centrum. Obsahuje informace o službách, možnost rezervace a responzivní rozhraní přizpůsobené pro klienty všech věkových kategorií.",
-  },
-];
+
+
+
+
+
 
 const Treneri = () => {
+  const { t } = useTranslation();
   const [hoveredTrainer, setHoveredTrainer] = useState(null);
   const [cursorPos, setCursorPos] = useState({ x: 0, y: 0 });
   const [mobilePopup, setMobilePopup] = useState(null);
@@ -130,17 +81,66 @@ const Treneri = () => {
     hidden: { opacity: 0, y: 50 }, // Start further down for smoother effect
     visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } }, // Slower and smoother
   };
-
+  const trainers = [
+    {
+      name: "NaraWebs",
+      sport: "Website",
+      image: Nara,
+      linkGit: "https://github.com/RobiNZajicek",
+      webLink: "https://narawebs.com",
+      description: t("narawebs_description"),
+    },
+    {
+      name: "Sheel App",
+      sport: "App for cards",
+      image: Card,
+      linkGit: "https://github.com/RobiNZajicek/cards",
+      webLink: "https://vercel.com/zajicekrobin3gmailcoms-projects/cards-j8kl",
+      description: t("sheel_description"),
+    },
+    {
+      name: "Striking",
+      sport: "Website with database",
+      image: Striking,
+      linkGit: "https://github.com/RobiNZajicek/Striking",
+      webLink: "https://praguestrikingacademy.cz/",
+      description: t("striking_description"),
+    },
+    {
+      name: "Pension U Papoušků",
+      sport: "Website",
+      image: Upapousku,
+      linkGit: "https://github.com/RobiNZajicek",
+      webLink: "https://www.upapousku.cz/",
+      description: t("pension_description"),
+    },
+    {
+      name: "3D Website",
+      sport: "Project for networks",
+      image: tri,
+      linkGit: "https://github.com/RobiNZajicek/3D-websiteRobinTom",
+      webLink: "/coming-soon",
+      description: t("3d_description"),
+    },
+    {
+      name: "Physiotherapy",
+      sport: "Website",
+      image: Nara,
+      linkGit: "https://github.com/RobiNZajicek/fyz-web",
+      webLink: "/coming-soon",
+      description: t("fyzio_description"),
+    },
+  ];
   return (
-    <div className="flex flex-col items-center text-white py-12 bg-[#00060E] relative pb-44">
+    <div className="flex flex-col items-center text-white py-12 bg-[#00060E] relative pb-44 projects">
       <div className="TreninkBlurosss"></div>
       <div className="TreninkBlurosssTop"></div>
 
       <h2 className="text-[30px] mt-8 xl:mt-24 sm:text-[30px] md:text-[35px] lg:text-[45px] xl:text-[50px] font-orbion font-black text-primary  glow-text">
-        My Projects
+      {t("my_projects")}
       </h2>
       <span className="text-[14px] sm:text-[15px] md:text-[15px] lg:text-[16px] z-50 xl:text-[17px] Dosxl:text-[18px] text-center font-medium text-[#BDBDBD] mt-4 mb-4 w-4/6 sm:w-4/6 md:w-4/6 lg:w-3/6 Dosxl:1/6 font-sans">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, adipisci! Ut magni dolores ipsa vel, provident consequatur soluta nesciunt, molestiae esse et placeat corporis eum labore maxime possimus molestias sint!
+      {t("projects_intro")}
       </span>
 
       {/* Trainers List */}
