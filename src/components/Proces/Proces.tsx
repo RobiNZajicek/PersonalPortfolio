@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import './Proces.css';
-import Cv from '../../assets/CV/Robin_CV (1) (2).pdf'
+import Cv from '../../assets/CV/Robin_CV (3).pdf'
 import { useTranslation } from 'react-i18next';
 const Proces = () => {
   // Animation variants
@@ -112,7 +112,7 @@ const Proces = () => {
           <span className='text-[25px] sm:text-[25px] md:text-[25px] lg:text-[28px] xl:text-[30px] Dosxl:text-[45px] z-50 uppercase font-black text-white font-orbion'>
             {t('reliability')}
           </span>
-          <span className='font-normal text-[15px] sm:text-[16px] md:text-[15px] lg:text-[18px] Dosxl:text-[20px] z-50 text-[#BDBDBD] text-center w-[2750px] md:w-4/6 font-sans mb-8'>
+          <span className='font-normal text-[15px] sm:text-[16px] md:text-[15px] lg:text-[18px] Dosxl:text-[20px] z-50 text-[#BDBDBD] text-center w-[275px] md:w-4/6 font-sans mb-8'>
             {t('reliability_brief')}
           </span>
         </motion.div>

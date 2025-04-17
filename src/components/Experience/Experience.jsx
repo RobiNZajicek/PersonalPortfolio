@@ -24,7 +24,7 @@ const ExperienceCard = ({ experience }) => {
      
       }}
       contentArrowStyle={{ borderRight: "7px solid  white" }}
-      date={<span  style={{ fontWeight: 'bold', color: '#3b82f6',zIndex:'20'}} >{t(experience.title)} </span>}
+      date={<h3 className="glow-text text-white/90" style={{ fontWeight: 'bold', color: '#FFFF' }} >{t(experience.date)}</h3>}
       iconStyle={{ background: '#3b82f6'}}
       icon={
         <div className='black flex justify-center items-center w-full h-full'>
@@ -38,8 +38,13 @@ const ExperienceCard = ({ experience }) => {
       }
     >
       <div>
-        <h3 className='font-ed text-[25px] font-extrabold glow-textos'>{t(experience.company_name)}</h3>
-        
+        <h3 className='font-ed text-[34px] font-extrabold '>{t(experience.title)}</h3>
+        <h2
+          className='  text-[20px] text-white font-bold'
+          style={{ margin: 0 }}
+        >
+         <span className="text-white">{t(experience.company_name)}</span> 
+        </h2>
       </div>
 
       <ul className='mt-5 text-white list-disc ml-5 space-y-2'>
@@ -61,11 +66,9 @@ const Experience = () => {
 
   return (
     <section id="experience" className='works relative'>
-      <motion.div
-              className='bluros blurss3'
-           
-            />
-      <motion.div variants={textVariant()} >
+      <div className="blursses"></div>
+      <div className="blursses2"></div>
+      <motion.div variants={textVariant()}  className="">
         <p className={`${styles.sectionSubText} text-center text-blue-500`}>
          {t("experience_subtext")}
         </p>
@@ -83,10 +86,6 @@ const Experience = () => {
             />
           ))}
         </VerticalTimeline>
-        <motion.div
-                className='bluros blurss2'
-   
-              />
       </div>
     </section>
   );

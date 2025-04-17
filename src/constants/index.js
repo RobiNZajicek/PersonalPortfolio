@@ -154,11 +154,11 @@ const frontEnd = [
     {
       key: "education_experience",
       title: "education_title",
-      img:'',
+      date:"data_one",
       company_name: "technical_school_name",
       icon:"" ,
       iconBg: "#383E56",
-      date: "",
+
       points: [
         "education_point_1",
         "education_point_2",
@@ -183,11 +183,11 @@ const frontEnd = [
     {
       key: "pied_piper_experience",
       title: "pied_piper_title",
-      img:'',
+      date:"data_two",
       company_name: "pied_piper_name",
       icon:"",
       iconBg: "#E6DEDD",
-      date: "",
+      
       points: [
         "pied_piper_point_1",
         "pied_piper_point_2",
@@ -198,11 +198,11 @@ const frontEnd = [
     {
       key: "narawebs_experience",
       title: "narawebs_title",
-      img:'',
+      date:"data_three",
       company_name: "narawebs_name",
       icon: "",
       iconBg: "#383E56",
-      date: "",
+    
       points: [
         "narawebs_point_1",
         "narawebs_point_2",

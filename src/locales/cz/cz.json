@@ -110,7 +110,10 @@
           "contact_fail": "Odeslání zprávy selhalo, zkuste to znovu.",
           "contact_phone": "Telefonní číslo",
           "contact_email": "E-mailová adresa",
-          "contact_address": "Adresa"
+          "contact_address": "Adresa",
+          "data_one":"09/2022-současně",
+            "data_two":"07/2023 - 03/2024",
+            "data_three":"11/2022 - současně"
         
         
       

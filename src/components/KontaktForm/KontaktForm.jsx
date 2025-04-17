@@ -98,7 +98,7 @@ const KontaktForm = () => {
           {contactItems.map((item, index) => (
             <motion.div
               key={index}
-              className='bg-[#0b142f] p-6 rounded-xl flex items-center gap-4 w-full'
+              className='bg-[#0b142f] h-[135px] p-6 rounded-xl flex items-center gap-4 w-full'
             >
               <div className='shrink-0 text-blue-500 text-[20px] md:text-[24px]'>
                 {item.icon}

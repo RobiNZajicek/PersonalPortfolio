@@ -1,6 +1,4 @@
-
 import { useTranslation } from 'react-i18next';
-
 import { motion } from 'framer-motion';
 import { Link } from 'react-scroll';
 import {
@@ -90,35 +88,34 @@ export function HeaderMegaMenu() {
   };
   const languageButtonLabel = i18n.language === 'en' ? 'CZ' : 'EN';
 
-const links = projects.map((item) => (
-  <Anchor
-    key={item.id}
-    href={item.link !== '' ? item.link : '/coming-soon'}
-    target="_blank"
-    className={classes.subLink}
-  >
-    <Group wrap="nowrap" align="flex-start">
-      <ThemeIcon size={34} variant="default" radius="md">
-        <item.icon style={{ width: rem(22), height: rem(22) }} color="#3b82f6" />
-      </ThemeIcon>
-      <div>
-        <Text className="text-white" size="sm" fw={500}>
-          {item.name}
-        </Text>
-        <Text className="text-white" size="xs">
-          {item.description}
-        </Text>
-      </div>
-    </Group>
-  </Anchor>
-));
-
+  const links = projects.map((item) => (
+    <Anchor
+      key={item.id}
+      href={item.link !== '' ? item.link : '/coming-soon'}
+      target="_blank"
+      className={classes.subLink}
+    >
+      <Group wrap="nowrap" align="flex-start">
+        <ThemeIcon size={34} variant="default" radius="md">
+          <item.icon style={{ width: rem(22), height: rem(22) }} color="#3b82f6" />
+        </ThemeIcon>
+        <div>
+          <Text className="text-white" size="sm" fw={500}>
+            {item.name}
+          </Text>
+          <Text className="text-white" size="xs">
+            {item.description}
+          </Text>
+        </div>
+      </Group>
+    </Anchor>
+  ));
 
   return (
-    <Box pb={120} >
-      <motion.header initial={{ opacity: 0 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 4.5, type: 'spring' }} className={classes.header}>
+    <Box pb={80} pt={12} px={15}>
+      <motion.header initial={{ opacity: 0 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 4.5, type: 'spring' }} className='container py-4 mx-8'>
         <Group justify="space-between" h="100%">
-          <span className='font-bold text-white  text-2xl   max-2xl:text-xl  max-lg:text-base'>{t('Robin.dev')}</span>
+          <span className='font-bold text-white text-2xl max-2xl:text-xl max-lg:text-base'>{t('Robin.dev')}</span>
 
           <Group h="100%" gap={0} visibleFrom="sm">
             <Link to='home' className={classes.link} spy={true} smooth={true} offset={-70} duration={500}>
@@ -171,13 +168,13 @@ const links = projects.map((item) => (
           </Group>
 
           <Group visibleFrom="sm">
-          <button onClick={toggleLanguage} className='bg-gradient-to-r border-2 border-blue-500 rounded-md w-12 h-9 font-bold max-lg:w-7 max-lg:h-8 max-lg:text-xs    text-blue-500'>{languageButtonLabel}</button>
+            <button onClick={toggleLanguage} className='bg-gradient-to-r border-2 border-blue-500 rounded-md w-12 h-9 font-bold max-lg:w-7 max-lg:h-8 max-lg:text-xs text-blue-500'>{languageButtonLabel}</button>
             <Link to='contact' spy={true} smooth={true} offset={-70} duration={500}>
-              <button className='bg-gradient-to-r bg-blue-500 rounded-md p-2 h-9 font-bold  max-lg:h-8 max-lg:text-xs   text-white button-contact '>{t('Hire me')}</button>
+              <button className='bg-gradient-to-r bg-blue-500 rounded-md p-2 h-9 font-bold max-lg:h-8 max-lg:text-xs text-white button-contact '>{t('Hire me')}</button>
             </Link>
           </Group>
-
-          <Burger opened={drawerOpened} className='text-white fill-white' onClick={toggleDrawer} hiddenFrom="sm" />
+              
+          <Burger opened={drawerOpened} onClick={toggleDrawer} hiddenFrom="sm" color="white" />
         </Group>
       </motion.header>
 
@@ -187,47 +184,74 @@ const links = projects.map((item) => (
         size="100%"
         padding="md"
         title="Navigation"
-       className="text-black"
         zIndex={1000000}
-        
+        styles={{
+          title: { color: 'black' },
+          header: { backgroundColor: 'white' },
+          content: { backgroundColor: 'white' }
+        }}
       >
-        <ScrollArea className={classes.mobileSomePart}  h={`calc(100vh - ${rem(80)})`} mx="-md">
+        <ScrollArea h={`calc(100vh - ${rem(80)})`} mx="-md">
           <Divider my="sm" />
 
           <Link to='home' onClick={toggleDrawer} className={classes.link} spy={true} smooth={true} offset={-70} duration={500}>
-            {t('Home')}
+            <Text c="black">{t('Home')}</Text>
           </Link>
           <Link to='about' onClick={toggleDrawer} className={classes.link} spy={true} smooth={true} offset={-70} duration={500}>
-            {t('About')}
+            <Text c="black">{t('About')}</Text>
           </Link>
-          <Link to='experience' className={classes.link} spy={true} smooth={true} offset={-70} duration={500}>
-            {t('Experience')}
+          <Link to='experience' onClick={toggleDrawer} className={classes.link} spy={true} smooth={true} offset={-70} duration={500}>
+            <Text c="black">{t('Experience')}</Text>
           </Link>
           
 
-          <Link to="projects" spy={true} smooth={true} offset={-70} duration={500} onClick={toggleDrawer} className={classes.linkos}>
-            <UnstyledButton className={classes.link} onClick={toggleLinks}>
-              <Center inline>
-                <Box component="span" mr={5}>
-                  {t('Projects')}
-                </Box>
-                <IconChevronDown
-                  style={{ width: rem(16), height: rem(16) }}
-                  className={classes.parosos}
-                />
-              </Center>
-            </UnstyledButton>
-          </Link>
-          <Collapse in={linksOpened}>{links}</Collapse>
+          <UnstyledButton className={classes.link} onClick={toggleLinks}>
+            <Center inline>
+              <Text c="black" component="span" mr={5}>
+                {t('Projects')}
+              </Text>
+              <IconChevronDown
+                style={{ width: rem(16), height: rem(16), color: 'black' }}
+                className={classes.parosos}
+              />
+            </Center>
+          </UnstyledButton>
+          
+          <Collapse in={linksOpened}>
+            <div style={{ color: 'black' }}>
+              {projects.map((item) => (
+                <Anchor
+                  key={item.id}
+                  href={item.link !== '' ? item.link : '/coming-soon'}
+                  target="_blank"
+                  c="black"
+                >
+                  <Group wrap="nowrap" align="flex-start" p={12}>
+                    <ThemeIcon size={34} variant="default" radius="md">
+                      <item.icon style={{ width: rem(22), height: rem(22) }} color="#3b82f6" />
+                    </ThemeIcon>
+                    <div>
+                      <Text size="sm" fw={500} c="black">
+                        {item.name}
+                      </Text>
+                      <Text size="xs" c="black">
+                        {item.description}
+                      </Text>
+                    </div>
+                  </Group>
+                </Anchor>
+              ))}
+            </div>
+          </Collapse>
 
-          <Link to='contact' className={classes.link} spy={true} smooth={true} offset={-70} duration={500}>
-            {t('Contact')}
+          <Link to='contact' onClick={toggleDrawer} className={classes.link} spy={true} smooth={true} offset={-70} duration={500}>
+            <Text c="black">{t('Contact')}</Text>
           </Link>
 
           <Divider my="sm" />
 
           <Group justify="center" grow pb="xl" px="md">
-            <button onClick={toggleLanguage} className='bg-gradient-to-r border-2 bg-blue-500 rounded-md w-12 h-9 font-bold max-lg:w-7 max-lg:h-8 max-lg:text-xs    text-blue-500'>{languageButtonLabel}</button>
+            <button onClick={toggleLanguage} className='bg-gradient-to-r border-2 border-blue-500 rounded-md w-12 h-9 font-bold max-lg:w-7 max-lg:h-8 max-lg:text-xs text-blue-500'>{languageButtonLabel}</button>
             <button className='bg-gradient-to-r bg-blue-500 rounded-md w-32 h-9 font-bold text-white button-contact'>{t('Hire me')}</button>
           </Group>
         </ScrollArea>

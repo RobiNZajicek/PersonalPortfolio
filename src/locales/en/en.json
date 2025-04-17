@@ -110,7 +110,10 @@
             "contact_fail": "Failed to send message, try again.",
             "contact_phone": "Phone number",
             "contact_email": "Email address",
-            "contact_address": "Address"
+            "contact_address": "Address",
+            "data_one":"09/2022-Present",
+            "data_two":"07/2023 - 03/2024",
+            "data_three":"11/2022 - Current"
         
           
         

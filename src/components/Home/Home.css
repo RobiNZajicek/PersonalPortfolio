@@ -1,646 +1,145 @@
+/* Dekorativní kruhový prvek */
 .blursses {
-    width: 220px;
-    height: 250px;
-    left: 20%;
-    top: 0%;
+    position: absolute;
+    top: 0;
+    left: 80%;
+    width: 20vw;       /* Relativní na viewport width */
+    height: 20vw;      /* Zachovává poměr stran */
+    max-width: 320px;  /* Omezení maximální velikosti pro větší obrazovky */
+    max-height: 320px;
     transform: translateX(-50%);
-    opacity: 1;   
-    z-index: 3;
-    background-color: #3b82f6;
-    position: absolute;
-    border-radius: 50%;
-    filter: blur(250px);
+    opacity: 0.8;
     z-index: -1;
+    background-color: #3b82f6;
+    border-radius: 50%;
+    filter: blur(10vw); /* Relativní hodnota blur, která se přizpůsobí velikosti */
+    transition: all 0.3s ease;
   }
   
-  /* Responsive Adjustments */
-  @media (max-width: 1024px) {
-    .blursses {
-        width: 250px;
-        height: 280px;
-        filter: blur(200px);
-        display: none;
-    }
-  }
-  
-  @media (max-width: 768px) {
-    .blursses {
-        width: 200px;
-        height: 220px;
-        filter: blur(150px);
-        display: none;
-    }
-  }
-  
-  @media (max-width: 480px) {
-    .blursses {
-        width: 150px;
-        height: 180px;
-        filter: blur(100px);
-        display: none;
-    }
-  }
-  
-.home{
-    height: 75vh;
-    position: relative;
-    padding: 1rem 15.5%;
-
-    @media (max-width: 1400px) {
-      padding: 1rem 10%;
-     
-    }
-}
-.home-container{
-    display: flex;
-}
-.home-container-left{
-    flex: 1;
-    margin-top: 4rem;
-  
-}
-.home-text{
-    font-size: 3rem;
-    font-weight: bolder;
-    width: 150%;
-
-    
-}
-.It-img{
-    
-}
-.frontend{
-    width: 275px;
-    box-shadow: #3b82f6 1px 1px 15px 1px;
-}
-
-.backend{
-    width: 255px;
-    box-shadow: #3b82f6 1px 1px 15px 1px;
-}
-.ics{
-    margin-left: -7px;
-}
-.icns{
-  right: 442px;
-  top: 100px;
-  
-}
-.poiner-1{
-    margin-left: -1.9rem;
-    margin-top: 67px;
-    transform: rotate(-12deg);
-}
-.poiner-2{
-    margin-top: 75px;
-     margin-right: -2.2rem;
-    margin-left: 3rem; 
-    transform: rotate(40deg);
-}
-.home-par{
-    color: white ;
-    font-weight: 300;
-    width: 70%;
-    font-size: 16px;
-}
-.home-container-right{
-    flex: 1;
-    display: flex;
-    
-}   
-.home-card{
-    
-    width: 750px;
-}
-.stick{
-    
-    position: absolute;
-    margin-left: -7rem;
-    transform: rotate(-20deg);
-    
-}
-    
-.tech-icon{
-    
-    width: 1rem;
-    height: 1rem;
-
-}
-.techs {
-    margin-left: 10px;
-   justify-content: center;
+  /* Obecný layout kontejneru */
+  .home-container {
     display: flex;
     flex-wrap: wrap;
-    gap: 22px; /* Adjust as needed */
-  }
-  @media (max-width: 1650px) {
-    .home{
-        height: 70vh;
-        
-        padding: 1rem 15.5%;
+   
     
-        @media (max-width: 1400px) {
-          padding: 1rem 10%;
-         
-        }
+    padding: 2rem 0rem;
+    position: relative;
+  }
+  
+  /* Levá strana kontejneru (text a obrázky apod.) */
+  .home-container-left {
+    flex: 1;
+    min-width: 280px;   /* Zajišťuje minimální šířku na menších zařízeních */
+    padding: 1rem;
+  }
+  .shajt{
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    flex-direction: column;
+    width: 70%;
+  }
+ 
+  /* Upravený text */
+  .home-text {
+    font-size: 3rem;
+    font-weight: bolder;
+    width: 100%;
+    text-align: left;
+  }
+  
+  .home-par {
+    color: white;
+    font-weight: 300;
+    width: 100%;
+    font-size: 1rem;
+    margin-top: 1rem;
+  }
+  
+  /* Pravá strana kontejneru (např. obrazový blok) */
+  .home-container-right {
+    flex: 1;
+    min-width: 280px;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+  }
+  
+  /* Úprava obrázků a dalších elementů */
+  .It-img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    margin: 0 auto;
+  }
+  
+  .frontend,
+  .backend {
+    
+    max-width: 300px;
+    box-shadow: #3b82f6 1px 1px 15px 1px;
+   
+  }
+  
+  /* Ikonky a další drobnosti */
+  .techs {
+    margin-top: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+  
+  .tech-icon {
+    width: 1rem;
+    height: 1rem;
+  }
+  @media (max-width: 1400px) {
+    .tech-icon {
+      width: 0.7rem;
+      height: 0.7rem;
     }
-    .home-container{
-        display: flex;
+  }
+  /* Doladění pro střední obrazovky a tablety */
+  @media (max-width: 1000px) {
+    .home-text {
+      font-size: 2.5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
     }
     .home-container-left{
-        flex: 1;
-        margin-top: 4rem;
-      
+      justify-content: center;
+      align-items: center;
+      display: flex;
+      flex-direction: column  ;
     }
-    .home-text{
-        font-size: 2rem;
-        font-weight: bolder;
-        width: 150%;
-    
-        
-    }
-    .It-img{
-        width: 400px;
-        height: 400px;
-        margin-left: 5rem;
+    .shajt{
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      text-align: center;
+      margin: 0 auto;
     }
     .frontend{
-        width: 300px;
+      margin: 0 auto;
     }
-    
     .backend{
-        width: 273px;
-    }
-    .ics{
-        margin-left: -7px;
-    }
-    .icns{
-      right: 302px;
-      top: 150px;
-    }
-    .poiner-1{
-        margin-left: -1.9rem;
-        margin-top: 47px;
-        transform: rotate(-12deg);
-    }
-    .faos{
-        width: 10px;
-        height: 10px;
-        transform: scale(0.7);
-    }
-    .poiner-2{
-        margin-top: 55px;
-         margin-right: -2.2rem;
-        margin-left: 3rem; 
-        transform: rotate(40deg);
-    }
-    .home-par{
-        color: white ;
-        font-weight: 600;
-        width: 70%;
-        font-size: 15px;
+      margin: 0 auto;
     }
     .home-container-right{
-        flex: 1;
-        
-    }   
-    .home-card{
-        
-        width: 750px;
+      display: none;
     }
-    .stick{
-        
-        position: absolute;
-        margin-left: -7rem;
-        transform: rotate(-20deg);
-        
+   
+    .blursses {
+      width: 25vw;
+      height: 25vw;
+      max-width: 300px;
+      max-height: 300px;
+      filter: blur(8vw);
     }
-        
-    .tech-icon{
-        
-        width: 1rem;
-        height: 1rem;
-    }
-    .techs {
-        margin-left: 10px;
-       justify-content: center;
-        display: flex;
-        flex-wrap: wrap;
-        gap: 22px; /* Adjust as needed */
-      }
+  }
+  
 
-    }
-    @media (max-width: 1260px) {
-        .home{
-            height: 70vh;
-            
-            padding: 1rem 10%;
-        
-            
-        }
-        .home-container{
-            display: flex;
-        }
-        .home-container-left{
-            flex: 1;
-            margin-top:3rem;
-          
-        }
-        .home-text{
-            font-size: 2rem;
-            font-weight: bolder;
-            width: 150%;
-        
-            
-        }
-        .It-img{
-            width: 400px;
-            height: 400px;
-            margin-left: 4rem;
-        }
-        .frontend{
-            width: 275px;
-            height: 35px;
-          margin: 0;
-        }
-        
-        .backend{
-            width: 250px;
-            height: 35px;
-            margin-top: 0px;
-            margin: 0;
-        }
-        .ics{
-            margin-left: -7px;
-        }
-        .icns{
-          right: 242px;
-          top: 150px;
-          gap: 1px;
-        }
-        
-        
-        .poiner-1{
-            margin-left: -1.9rem;
-            margin-top: 47px;
-            transform: rotate(-12deg);
-        }
-        .faos{
-            width: 10px;
-            height: 10px;
-            transform: scale(0.7);
-        }
-        .poiner-2{
-            margin-top: 55px;
-             margin-right: -2.2rem;
-            margin-left: 3rem; 
-            transform: rotate(40deg);
-        }
-        .home-par{
-            color: white ;
-            font-weight: 600;
-            width: 85%;
-            font-size: 13px;
-        }
-        .text-program{
-            font-size: 13px;
-        }
-        .home-container-right{
-            flex: 1;
-            
-        }   
-        .home-card{
-            
-            width: 750px;
-        }
-        .stick{
-            
-            position: absolute;
-            margin-left: -7rem;
-            transform: rotate(-20deg);
-            
-        }
-            
-        .tech-icon{
-            
-            width: 0.9rem;
-            height: 0.9rem;
-        }
-        .techs {
-            margin-left: 10px;
-           justify-content: center;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 22px; /* Adjust as needed */
-          }
-    
-        }
-        @media (max-width: 1000px){
-            .home{
-                height: 70vh;
-                
-                padding: 1rem 6.7%;
-            
-                
-            }
-            .home-container{
-                display: flex;
-            }
-            .home-container-left{
-                flex: 1;
-                margin-top:2rem;
-              
-            }
-            .home-text{
-                font-size: 1.7rem;
-                font-weight: bolder;
-                width: 150%;
-            
-                
-            }
-            .It-img{
-                width: 335px;
-                height: 335px;
-                margin-left: 1rem;
-            }
-            .frontend{
-                width: 275px;
-                height: 25px;
-              margin: 0;
-            }
-            
-            .backend{
-                width: 250px;
-                height: 25px;
-                margin-top: 0px;
-                margin: 0;
-            }
-            .ics{
-                margin-left: -7px;
-            }
-            .icns{
-              right: 172px;
-              top: 150px;
-              gap: 1px;
-            }
-            
-            
-            .poiner-1{
-                margin-left: -1.9rem;
-                margin-top: 47px;
-                transform: rotate(-12deg);
-            }
-            .faos{
-                width: 10px;
-                height: 10px;
-                transform: scale(0.7);
-            }
-            .poiner-2{
-                margin-top: 55px;
-                 margin-right: -2.2rem;
-                margin-left: 3rem; 
-                transform: rotate(40deg);
-            }
-            .home-par{
-                color: white ;
-                font-weight: 600;
-                width: 80%;
-                font-size: 13px;
-            }
-            .text-program{
-                font-size: 13px;
-            }
-            .home-container-right{
-                flex: 1;
-                margin-right: -4rem;
-                
-            }   
-            .home-card{
-                
-                width: 750px;
-            }
-            .stick{
-                
-                position: absolute;
-                margin-left: -7rem;
-                transform: rotate(-20deg);
-                
-            }
-                
-            .tech-icon{
-                
-                width: 0.9rem;
-                height: 0.9rem;
-            }
-            .techs {
-                margin-left: 10px;
-               justify-content: center;
-                display: flex;
-                flex-wrap: wrap;
-                gap: 22px; /* Adjust as needed */
-              }
-        
-        }
-        @media (max-width: 768px) {
-            .home{
-                height: 70vh;
-                
-                padding: 1rem 6.7%;
-            
-                
-            }
-            .home-container{
-                display: flex;
-            }
-            .home-container-left{
-                flex: 1;
-                margin-top:2rem;
-              
-            }
-            .home-text{
-                font-size: 1.5rem;
-                font-weight: bolder;
-                width: 150%;
-            
-                
-            }
-            .It-img{
-                width: 275px;
-                height: 275px;
-                margin-left: 1rem;
-            }
-            .frontend{
-                width: 225px;
-                height: 19px;
-                gap: 1px;
-              margin: 0;
-            }
-            
-            .backend{
-                width: 220px;
-                height: 19px;
-                margin-top: 0px;
-                gap: 1px;
-                margin: 0;
-            }
-            .ics{
-                margin-left: -7px;
-            }
-            .icns{
-              right: 102px;
-              top: 150px;
-              gap: 1px;
-            }
-            
-            
-            .poiner-1{
-                margin-left: -1.9rem;
-                margin-top: 47px;
-                transform: rotate(-12deg);
-            }
-            .faos{
-                width: 10px;
-                height: 10px;
-                transform: scale(0.5);
-            }
-            .poiner-2{
-                margin-top: 55px;
-                 margin-right: -2.2rem;
-                margin-left: 3rem; 
-                transform: rotate(40deg);
-            }
-            .home-par{
-                color: white ;
-                font-weight: 600;
-                width: 80%;
-                font-size: 10px;
-            }
-            .text-program{
-                font-size: 9px;
-            }
-            .home-container-right{
-                flex: 1;
-                margin-right: -3rem;
-                
-            }   
-            .home-card{
-                
-                width: 750px;
-            }
-            .tech-icon{
-                
-                width: 0.7rem;
-                height: 0.7rem;
-            }
-        }
-        @media (max-width: 600px) {
-            .tech-icon{
-                
-                width: 0.9rem;
-                height: 0.9rem; 
-            }
-            .home{
-                height: 70vh;
-                width: 100vw;
-                padding: 0rem 6.7%;
-            
-                
-            }
-            .home-container{
-                display: flex;
-            }
-            .home-container-left{
-                flex: 1;
-                margin-top:0rem;
-                display: flex;
-                justify-content: center;
-                flex-direction: column;
-                align-items: center;
-              
-            }
-            .shajt{
-                display: flex;
-                flex-direction: column;
-                gap: 2px;
-                margin-top: 1rem;
-            }
-            .home-text{
-                font-size: 1.5rem;
-                font-weight: bolder;
-                width: 100%;
-                text-align: center;
-            
-                
-            }
-            .It-img{
-                width: 275px;
-                height: 275px;
-                margin-left: 1rem;
-                display: none;
-            }
-            .frontend{
-                width: 275px;
-                height: 25px;
-              margin: 0;
-            }
-            
-            .backend{
-                
-                width: 275px;
-                height: 25px;
-                margin-top: 0px;
-                margin: 0;
-            }
-            .ics{
-                margin-left: -7px;
-            }
-            .icns{
-              right:37%;
-              top: 10%;
-              gap: 1px;
-            }
-            
-            
-            .poiner-1{
-                margin-left: -1.9rem;
-                margin-top: 47px;
-                transform: rotate(-12deg);
-            }
-            .faos{
-                width: 10px;
-                height: 10px;
-                transform: scale(0.7);
-            }
-            .poiner-2{
-                margin-top: 55px;
-                 margin-right: -2.2rem;
-                margin-left: 3rem; 
-                transform: rotate(40deg);
-            }
-            .home-par{
-                color: white ;
-                font-weight: 600;
-                width: 80%;
-                font-size: 11px;
-                text-align: center;
-            }
-            .text-program{
-                font-size: 11px;
-            }
-            .home-container-right{
-                flex: 1;
-                margin-right: -3rem;
-                
-            }   
-            .home-card{
-                
-                width: 750px;
-            }
-            .home-container-right{
-                display: none;
-                flex: 1;
-                margin-right: -3rem;
-                
-            } 
-        }
-       
+  
