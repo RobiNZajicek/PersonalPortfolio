@@ -93,11 +93,11 @@
   }
 }
 .mobile{
-  background-color: black;
+  --background: #00060E;
 }
 .mobileSomePart{
   border: none;
-  color: black;
+  --background: #00060E;
 }
 @media (max-width: 1000px) {
   
@@ -106,7 +106,7 @@
     padding-left: var(--mantine-spacing-md);
     padding-right: var(--mantine-spacing-md);
     border-bottom: rem(1px) solid light-dark(var(--mantine-color-gray-3), var(--mantine-color-dark-4));
-    
+    --background: #00060E;
     padding: 1rem 6.7%;
   
     
@@ -118,7 +118,7 @@
     padding-left: var(--mantine-spacing-md);
     padding-right: var(--mantine-spacing-md);
     text-decoration: none;
-    color: white;
+    color: #FFFF;
     font-weight: 500;
     
     cursor: pointer;
@@ -134,7 +134,7 @@
     padding-left: 11px;
     padding-right: 11px;
     text-decoration: none;
-    color: white;
+    color: rgb(255, 255, 255);
     font-size: 12px;
     font-weight: 500;
     
@@ -161,7 +161,6 @@
     padding-left: var(--mantine-spacing-md);
     padding-right: var(--mantine-spacing-md);
     text-decoration: none;
-    color: black;
     font-weight: 500;
     
     cursor: pointer;
@@ -177,7 +176,7 @@
     padding-left: var(--mantine-spacing-md);
     padding-right: var(--mantine-spacing-md);
     text-decoration: none;
-    color: black;
+    color: white;
     font-size: 15px;
     font-weight: 500;
     

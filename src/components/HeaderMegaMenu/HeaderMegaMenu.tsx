@@ -183,35 +183,35 @@ export function HeaderMegaMenu() {
         onClose={closeDrawer}
         size="100%"
         padding="md"
-        title="Navigation"
+        title="Robin.dev"
         zIndex={1000000}
         styles={{
-          title: { color: 'black' },
-          header: { backgroundColor: 'white' },
-          content: { backgroundColor: 'white' }
+          title: { color: '#FFFF' },
+          header: { backgroundColor: '#00060E' },
+          content: { backgroundColor: '#00060E' }
         }}
       >
         <ScrollArea h={`calc(100vh - ${rem(80)})`} mx="-md">
           <Divider my="sm" />
 
           <Link to='home' onClick={toggleDrawer} className={classes.link} spy={true} smooth={true} offset={-70} duration={500}>
-            <Text c="black">{t('Home')}</Text>
+            <Text c="white">{t('Home')}</Text>
           </Link>
           <Link to='about' onClick={toggleDrawer} className={classes.link} spy={true} smooth={true} offset={-70} duration={500}>
-            <Text c="black">{t('About')}</Text>
+            <Text c="white">{t('About')}</Text>
           </Link>
           <Link to='experience' onClick={toggleDrawer} className={classes.link} spy={true} smooth={true} offset={-70} duration={500}>
-            <Text c="black">{t('Experience')}</Text>
+            <Text c="white">{t('Experience')}</Text>
           </Link>
           
 
           <UnstyledButton className={classes.link} onClick={toggleLinks}>
             <Center inline>
-              <Text c="black" component="span" mr={5}>
+              <Text c="white" component="span" mr={5}>
                 {t('Projects')}
               </Text>
               <IconChevronDown
-                style={{ width: rem(16), height: rem(16), color: 'black' }}
+                style={{ width: rem(16), height: rem(16), color: 'white' }}
                 className={classes.parosos}
               />
             </Center>
@@ -224,17 +224,17 @@ export function HeaderMegaMenu() {
                   key={item.id}
                   href={item.link !== '' ? item.link : '/coming-soon'}
                   target="_blank"
-                  c="black"
+                  c="white"
                 >
                   <Group wrap="nowrap" align="flex-start" p={12}>
                     <ThemeIcon size={34} variant="default" radius="md">
                       <item.icon style={{ width: rem(22), height: rem(22) }} color="#3b82f6" />
                     </ThemeIcon>
                     <div>
-                      <Text size="sm" fw={500} c="black">
+                      <Text size="sm" fw={500} c="white">
                         {item.name}
                       </Text>
-                      <Text size="xs" c="black">
+                      <Text size="xs" c="white">
                         {item.description}
                       </Text>
                     </div>
@@ -245,7 +245,7 @@ export function HeaderMegaMenu() {
           </Collapse>
 
           <Link to='contact' onClick={toggleDrawer} className={classes.link} spy={true} smooth={true} offset={-70} duration={500}>
-            <Text c="black">{t('Contact')}</Text>
+            <Text c="white">{t('Contact')}</Text>
           </Link>
 
           <Divider my="sm" />
