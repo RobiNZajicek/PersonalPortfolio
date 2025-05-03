@@ -156,15 +156,15 @@ const Home = () => {
       
         <div className='home-container-left'>
         <motion.div  initial={{opacity:0,y:-10}} animate={{opacity:1,y:0}} transition={{delay:2,duration:2 }} className='flex flex-row'>
-            <a className=' h-16  w-16 flex justify-center items-center border-2-black rounded-full' href="https://www.linkedin.com/public-profile/settings?trk=d_flagship3_profile_self_view_public_profile" target="_blank" rel="noreferrer">
-              <FaLinkedin className='w-12 h-12 fill-white cursor-pointer faos' />
+            <a className=' h-12  w-12 flex justify-center items-center border-2-black rounded-full' href="https://www.linkedin.com/public-profile/settings?trk=d_flagship3_profile_self_view_public_profile" target="_blank" rel="noreferrer">
+              <FaLinkedin className='md:w-12 md:h-12 w-8 h-8 fill-white cursor-pointer faos' />
             </a>
-            <a href="https://github.com/RobiNZajicek" target="_blank" rel="noreferrer">
-              <FaGithub className='w-12 h-12 cursor-pointer faos ' />
+            <a className=' h-12  w-12 flex justify-center items-center border-2-black rounded-full' href="https://github.com/RobiNZajicek" target="_blank" rel="noreferrer">
+              <FaGithub className='md:w-12 md:h-12 w-8 h-8 cursor-pointer faos ' />
             </a>
           </motion.div>
           <h1 className='text-[20px] sm:text-[20px] md:text-[25px] lg:text-[30px] xl:text-[40px] font-orbion font-black glow-text'>{t("hi_text")} <span className=" glow-text text-[20px]  sm:text-[25px] md:text-[30px] lg:text-[35px] xl:text-[40px] font-orbion font-black border-r-8 border-b" data-rotate='[ "Full Stack Dev.", "Web Designer", "Robin", "" ]'><span className="wrap">{text}</span></span></h1>
-          <p className='text-[12px] sm:text-[13px] md:text-[14px] lg:text-[15px] Dosxl:text-[18px] text-center lg:text-start w-3/5 lg:w-4/6 mt-4 '>{t("intro_text")}<span className='hidden'>{index}</span></p>
+          <p className='hidden md:flex text-[12px] sm:text-[13px] md:text-[14px] lg:text-[15px] Dosxl:text-[18px] text-center lg:text-start w-3/5 lg:w-4/6 mt-4 '>{t("intro_text")}<span className='hidden'>{index}</span></p>
           <div className='shajt mt-2'>
           <div className='  mt-6 px-2 frontend flex rounded-md  text-white  items-center flex-row  max-xl:mt-2'>
             <span className='font-semibold text-[12px]'>{t("front_end")}</span>
