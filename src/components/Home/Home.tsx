@@ -164,7 +164,7 @@ const Home = () => {
             </a>
           </motion.div>
           <h1 className='text-[20px] sm:text-[20px] md:text-[25px] lg:text-[30px] xl:text-[40px] font-orbion font-black glow-text'>{t("hi_text")} <span className=" glow-text text-[20px]  sm:text-[25px] md:text-[30px] lg:text-[35px] xl:text-[40px] font-orbion font-black border-r-8 border-b" data-rotate='[ "Full Stack Dev.", "Web Designer", "Robin", "" ]'><span className="wrap">{text}</span></span></h1>
-          <p className='text-[12px] sm:text-[13px] md:text-[14px] lg:text-[15px] Dosxl:text-[18px] text-center lg:text-start w-3/5 lg:w-4/6 mt-4 '>{t("intro_text")}<span className='hidden'>{index}</span></p>
+          <p className='text-[12px] sm:text-[13px] md:text-[14px] lg:text-[15px] Dosxl:text-[18px] text-center lg:text-start md:w-4/6 sm:w-4/6  lg:w-4/6 mt-4 '>{t("intro_text")}<span className='hidden'>{index}</span></p>
           <div className='shajt mt-2'>
           <div className='  mt-6 px-2 frontend flex rounded-md  text-white  items-center flex-row  max-xl:mt-2'>
             <span className='font-semibold text-[12px]'>{t("front_end")}</span>
