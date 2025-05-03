@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import './Proces.css';
-import Cv from '../../assets/CV/Robin_CV (3).pdf'
+import Cv from '../../assets/CV/Robin_CV (9).pdf'
 import { useTranslation } from 'react-i18next';
 const Proces = () => {
   // Animation variants
