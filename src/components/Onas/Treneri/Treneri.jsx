@@ -21,6 +21,13 @@ const Treneri = () => {
   const { ref, inView } = useInView({ triggerOnce: true });
   const [isClient, setIsClient] = useState(false);
 
+  // Define unfinished projects with their completion dates
+  const unfinishedProjects = {
+    "Physiotherapy": "2025-25-05",
+    "3D Website": "2025-14-05",
+    "Striking gym": "2025-12-5"
+  };
+
   useEffect(() => {
     setIsClient(true);
     const updateCursor = (e) => {
@@ -79,12 +86,14 @@ const Treneri = () => {
       description: t("narawebs_description"),
     },
     {
-      name: "Striking",
+      name: "Striking gym",
       sport: "Website with database",
       image: Striking,
       linkGit: "https://github.com/RobiNZajicek/Striking",
       webLink: "https://praguestrikingacademy.cz/",
       description: t("striking_description"),
+      isUnfinished: true,
+      completionDate: "2025-06-04"
     },
     {
       name: "Pension U Papoušků",
@@ -109,6 +118,8 @@ const Treneri = () => {
       linkGit: "https://github.com/RobiNZajicek/3D-websiteRobinTom",
       webLink: "/coming-soon",
       description: t("3d_description"),
+      isUnfinished: true,
+      completionDate: "2025-06-04"
     },
     {
       name: "Physiotherapy",
@@ -117,6 +128,8 @@ const Treneri = () => {
       linkGit: "https://github.com/RobiNZajicek/fyz-web",
       webLink: "/coming-soon",
       description: t("fyzio_description"),
+      isUnfinished: true,
+      completionDate: "2025-06-04"
     },
   ];
 
@@ -129,6 +142,13 @@ const Treneri = () => {
       onClick={() => isMobile && setMobilePopup(trainer)}
       variants={trainerVariants}
     >
+      {/* Unfinished project banner */}
+      {trainer.isUnfinished && (
+        <div className="absolute top-0 left-0 right-0 bg-red-700 text-black text-center py-1 z-20 font-bold text-xs sm:text-sm">
+          In progress - Coming {new Date(trainer.completionDate).toLocaleDateString('en-GB', { day: 'numeric', month: 'numeric', year: 'numeric' })}
+        </div>
+      )}
+      
       <div className="absolute inset-0 z-10 group-hover:bg-white/5 transition-all duration-300"></div>
       
       <img
@@ -212,6 +232,11 @@ const Treneri = () => {
           <div className="flex relative flex-col">
             <h3 className="text-[12px] sm:text-[13px] md:text-[14px] lg:text-[15px] z-50 xl:text-[16px] Dosxl:text-[18px] font-black font-orbion">{hoveredTrainer.name}</h3>
             <h3 className="text-[12px] sm:text-[13px] md:text-[14px] lg:text-[15px] z-50 xl:text-[16px] Dosxl:text-[18px] font-black mb-4 font-orbion">{hoveredTrainer.sport}</h3>
+            {hoveredTrainer.isUnfinished && (
+              <div className="bg-red-500 text-black px-2 py-1 rounded mb-2 text-xs font-bold">
+                In progress - Coming {new Date(hoveredTrainer.completionDate).toLocaleDateString('en-GB', { day: 'numeric', month: 'numeric', year: 'numeric' })}
+              </div>
+            )}
             <p className="font-sans font-bold text-[14px]">{hoveredTrainer.description}</p>
           </div>
         </motion.div>
